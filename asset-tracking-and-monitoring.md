@@ -1,3 +1,25 @@
+
+Filtering and Throttling (Global)
+
+- BLE MAC Pattern/Mask e.g. to include only MAC addresses BC000401/0000FFFF
+- Advertisement Pattern/Mask e.g. to include only BlueCats Advertisements 00000401/0000FFFF
+- RSSI Thresold e.g. -80
+- Accuracy Threshold e.g. 3.0 (would rely on measured power, RSSI and estimated distance algorithm running on Edge)
+- Throttle Window (seconds) e.g. 5. Will send one message per detected device within the throttle window
+- Throttle Device Limit e.g. 10. Will send detection message of up to 10 different devices within the Throttle Interval.
+- Advanced: Throttle Grouping algorthm (average, max, min, last, first). Applies to RSSI. In future potentially parsed/calculated values such as accuracy, sensor data
+
+Message Format:
+
+Raw:
+
+Serialized:
+
+CSV:
+
+JSON:
+
+
 # Asset Tracking and Monitoring: BlueCats Locate + BlueCats Sense
 
 ## BlueCats Locate
