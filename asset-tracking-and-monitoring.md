@@ -28,7 +28,7 @@
 - Measurement (Temperature, Accelerometer, Tilt)
 - Data
 
-## Scanned Device Information
+## Scanning BLE Advertisments
 
 ### Device Identification
 
@@ -40,16 +40,17 @@ A scanned may be identified by either its manufacturer assigned MAC address (pri
 
 MAC or Custom Identifier included in the payload may be either encrypted or plain/static
 
-### Proximity / Location
+### Proximity / Location Data
 
 - RSSI (Received Signal Strength Indicator)
 - MeasuredPower / Tx Power
 
-### Sensor	
+### Sensor Measurement Data
 
 - Temperature
 - Accelerometer (real-time sampling)
 - Accelerometer (motion event)
+- Tilt (Degrees from vertical)
 
 ### BC Management
 
@@ -57,13 +58,22 @@ MAC or Custom Identifier included in the payload may be either encrypted or plai
 - Settings version
 - Firmware Identifier
 
+# Default Edge Scan Filters
 
+When BLE advertisements are received from each scan they can be filtered using one or more rules.
+
+- BT Address Pattern/Mask e.g. 0007/FFFF would match any beacon with a public Bluetooth address starting with 0007
+- Generic Payload Pattern/Mask e.g. 000000FF/00000041 for BC Ads
+- Include any BlueCats Ad matching BC Team ID
+- Include any BlueCats Ad
+- Include only selected Ad Type/s
+- Only ads with a minimum received signal strength indicator (RSSI)
 
 # Common Edge Use Cases (Personas?)
 
-
-
 ## Use Case 1: Generic device detection with Signal Strength and Static BT Address
+
+Any BLE packet matchin filters will be forwarded with the following fields:
 
 
 ## Use Case 2: Device detection with custom identifier and distance estimation
@@ -77,17 +87,6 @@ MAC or Custom Identifier included in the payload may be either encrypted or plai
 # Throttling (MQTT)
 
 
-
-
-Filtering and Throttling (Global)
-
-- BLE MAC Pattern/Mask e.g. to include only MAC addresses BC000401/0000FFFF
-- Advertisement Pattern/Mask e.g. to include only BlueCats Advertisements 00000401/0000FFFF
-- RSSI Thresold e.g. -80
-- Accuracy Threshold e.g. 3.0 (would rely on measured power, RSSI and estimated distance algorithm running on Edge)
-- Throttle Window (seconds) e.g. 5. Will send one message per detected device within the throttle window
-- Throttle Device Limit e.g. 10. Will send detection message of up to 10 different devices within the Throttle Interval.
-- Advanced: Throttle Grouping algorthm (average, max, min, last, first). Applies to RSSI. In future potentially parsed/calculated values such as accuracy, sensor data
 
 Message Format:
 
