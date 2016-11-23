@@ -1,3 +1,83 @@
+# Beacon Configuration
+
+## All BlueCats Beacon Supported Ad Types
+
+### Apple	
+
+- iBeacon
+
+### Eddystone	
+
+- UID
+- URL
+- TLM
+- EID
+- eTLM
+
+### BlueCats	
+
+- iBeacon (iBeacon identifier + BlueCats beacon hea
+- Secure (Obscure)
+- Data (Deprecated)
+- Newborn (Deprecated)
+- Unconfigured
+- Management
+- eManagement
+- Identifier
+- eIdentifier
+- Measurement (Temperature, Accelerometer, Tilt)
+- Data
+
+## Scanned Device Information
+
+### Device Identification
+
+A scanned may be identified by either its manufacturer assigned MAC address (private Bluetooth Address) or a custom identifier included in the advertisement payload. This identifier may be encrypted (BlueCats Verified) or a plain-text/static component of the payload.
+
+- MAC - BT Address for any beacon where BT address privacy is disabled
+- MAC - Included in payload in BC Ads including Secure (obfuscated), Newborn, Unconfigured, Management, eManagement (encrypted)
+- Custom Identifer (Included in payload by iBeacon, Eddy-UID, BC-Identifier, BC-eIdentifier)
+
+MAC or Custom Identifier included in the payload may be either encrypted or plain/static
+
+### Proximity / Location
+
+- RSSI (Received Signal Strength Indicator)
+- MeasuredPower / Tx Power
+
+### Sensor	
+
+- Temperature
+- Accelerometer (real-time sampling)
+- Accelerometer (motion event)
+
+### BC Management
+
+- Remaining battery
+- Settings version
+- Firmware Identifier
+
+
+
+# Common Edge Use Cases (Personas?)
+
+
+
+## Use Case 1: Generic device detection with Signal Strength and Static BT Address
+
+
+## Use Case 2: Device detection with custom identifier and distance estimation
+
+## Use Case 3: Measurement Data Collect and Forward
+
+## Use Case 4: BlueCats Beacon Health Monitoring
+
+# End Point Options
+
+# Throttling (MQTT)
+
+
+
 
 Filtering and Throttling (Global)
 
