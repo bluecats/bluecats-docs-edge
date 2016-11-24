@@ -1,6 +1,6 @@
 # Beacon Configuration
 
-## All BlueCats Beacon Supported Ad Types
+## BlueCats Supported Ad Types
 
 ### Apple	
 
@@ -16,7 +16,7 @@
 
 ### BlueCats	
 
-- iBeacon (iBeacon identifier + BlueCats beacon hea
+- iBeacon (iBeacon identifier + BlueCats management)
 - Secure (Obscure)
 - Data (Deprecated)
 - Newborn (Deprecated)
@@ -44,6 +44,7 @@ MAC or Custom Identifier included in the payload may be either encrypted or plai
 
 - RSSI (Received Signal Strength Indicator)
 - MeasuredPower / Tx Power
+- Accuracy (calculated from RSSI and MPower)
 
 ### Sensor Measurement Data
 
@@ -73,16 +74,72 @@ When BLE advertisements are received from each scan they can be filtered using o
 
 ## Use Case 1: Generic device detection with Signal Strength and Static BT Address
 
-Any BLE packet matchin filters will be forwarded with the following fields:
+Any BLE packet matching packet filters will be forwarded with the following data:
 
+- EdgeMAC - Hardware MAC address of the Edge
+- BeaconMAC - Scanned (public) BT Address of the detected BLE device
+- RSSI - Received Signal Strength Indicator in dBm
+- Timestamp - Nanoseconds since Epoch
+- Payload - Full advertisement data
 
-## Use Case 2: Device detection with custom identifier and distance estimation
+Example: CSV (for UDP)
+
+```
+ACBC340223,ACBC340223,-54,272384229223422342234,00410000000000000
+```
+Example: Serialised C Struct (for UDP)
+
+Example: JSON (for MQTT,UDP)
+```
+{
+    EdgeMAC:"ACBC340223",
+    BeaconMAC:"ACBC340223",
+    RSSI:-75,
+    Timestamp:123423422342342234
+    Payload:"A0000BC1233100000012301233BC0123120000"
+}
+```
+
+## Use Case 2: Device proximity detection with custom identifier and distance estimation
+
+BLE packet matching packet filters will be forwarded with the following data:
+
+- EdgeMAC - Hardware MAC address of the Edge
+- EdgeName - User defined name for the Edge
+- BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
+- BeaconIdentifier - iBeacon key, UID, BC Identifier
+- RSSI - Received Signal Strength Indicator in dBm
+- MPow - Measured power at 1 metre
+- Accuracy - Calculated accuracy based on RSSI and measured power
+- Timestamp - Nanoseconds since Epoch
+
+Example: CSV (for UDP)
+
+```
+ACBC340223,ACBC340223,-54,272384229223422342234,00410000000000000
+```
+Example: Serialised C Struct (for UDP)
+
+Example: JSON (for MQTT,UDP)
+```
+{
+    EdgeMAC:"ACBC340223",
+    BeaconMAC:"ACBC340223",
+    RSSI:-75,
+    Timestamp:123423422342342234
+    Payload:"A0000BC1233100000012301233BC0123120000"
+}
+```
 
 ## Use Case 3: Measurement Data Collect and Forward
 
 ## Use Case 4: BlueCats Beacon Health Monitoring
 
-# End Point Options
+# Endpoint Configuration
+
+## UDP
+
+## MQTT
 
 # Throttling (MQTT)
 
