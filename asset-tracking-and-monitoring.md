@@ -70,9 +70,9 @@ When BLE advertisements are received from each scan they can be filtered using o
 - Include only selected Ad Type/s
 - Only ads with a minimum received signal strength indicator (RSSI)
 
-# Common Edge Use Cases (Personas?)
+# Default Edge Message Formats
 
-## Use Case 1: Generic device detection with Signal Strength and Static BT Address
+## Message Format 1: Generic device detection with Signal Strength and Static BT Address
 
 Any BLE packet matching packet filters will be forwarded with the following data:
 
@@ -82,30 +82,39 @@ Any BLE packet matching packet filters will be forwarded with the following data
 - Timestamp - Nanoseconds since Epoch
 - Payload - Full advertisement data
 
+| Field            | Example
+| ---              | ---
+| Edge MAC Address | E4956E40DFCF
+| BLE MAC Address  | A0E6F854703A
+| RSSI             | -53
+| Timestamp        | 1480314352373689
+| BLE Payload      | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
+
 Example: CSV (for UDP)
 
+e.g. 
 ```
-ACBC340223,ACBC340223,-54,272384229223422342234,00410000000000000
+E4956E40DFCF,A0E6F854703A,-63,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 ```
 Example: Serialised C Struct (for UDP)
 
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"ACBC340223",
-    BeaconMAC:"ACBC340223",
-    RSSI:-75,
-    Timestamp:123423422342342234
-    Payload:"A0000BC1233100000012301233BC0123120000"
+    EdgeMAC:"E4956E40DFCF",
+    BeaconMAC:"A0E6F854703A",
+    RSSI:-63,
+    Timestamp:1480314351666436
+    Payload:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
 }
 ```
 
-## Use Case 2: Device proximity detection with custom identifier and distance estimation
+## Message Format 2: Device proximity detection with custom identifier and distance estimation
 
 BLE packet matching packet filters will be forwarded with the following data:
 
 - EdgeMAC - Hardware MAC address of the Edge
-- EdgeName - User defined name for the Edge
+- EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
 - BeaconIdentifier - iBeacon key, UID, BC Identifier
 - RSSI - Received Signal Strength Indicator in dBm
@@ -116,44 +125,29 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-ACBC340223,ACBC340223,-54,272384229223422342234,00410000000000000
+E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-63,1.00,1480314351666436
 ```
-Example: Serialised C Struct (for UDP)
 
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"ACBC340223",
-    BeaconMAC:"ACBC340223",
-    RSSI:-75,
-    Timestamp:123423422342342234
-    Payload:"A0000BC1233100000012301233BC0123120000"
+    EdgeMAC:"E4956E40DFCF",
+    EdgeName:"Level 6 North",
+    BeaconMAC:"A0E6F854703A",
+    BeaconIdentifier:"61687109905F443691F8E602F514C96D00040F82",
+    RSSI:-63,
+    MPow:-63,
+    Accuracy:1.00
+    Timestamp:1480314351666436
 }
 ```
 
-## Use Case 3: Measurement Data Collect and Forward
+## Message Format 3: Measurement Data Collect and Forward
 
-## Use Case 4: BlueCats Beacon Health Monitoring
+## Messgae Format 4: BlueCats Beacon Health Monitoring
 
 # Endpoint Configuration
 
-## UDP
-
-## MQTT
-
-# Throttling (MQTT)
-
-
-
-Message Format:
-
-Raw:
-
-Serialized:
-
-CSV:
-
-JSON:
 
 
 # Asset Tracking and Monitoring: BlueCats Locate + BlueCats Sense
