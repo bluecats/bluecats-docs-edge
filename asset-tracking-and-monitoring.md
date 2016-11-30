@@ -1,3 +1,31 @@
+
+# Edge Configuration
+
+BlueCats
+ - Live View (beacon scan table)
+ - Applications
+ 	- Global BLE scanning rules
+ 		- RSSI threshold
+ 		- Advanced
+ 			- BLE Mac Address Pattern
+ 			- Advertisement Data Pattern
+ 	- BLE Packet scanning
+ 		- Enabled/disabled
+ 		- Endpoint (MQTT/UDP)
+ 		- Format (CSV/JSON)
+ 		- Message throttle
+ 	- Proximity scanning
+ 	- Sensor Measurement
+ 	- BlueCats Beacon Management
+ - Endpoints
+ 	- MQTT
+ 		- Certificates
+ 	- UDP
+ - Advanced
+ 	- BLE Configuration
+ 		- Scan settings
+ 		- FW updates
+
 # Beacon Configuration
 
 ## BlueCats Supported Ad Types
