@@ -70,8 +70,8 @@ Along with standard network configuration and other OpenWRT options, the followi
 |          | Unconfigured | YES  | -         | -           | YES
 |          | Management | YES  | -         | -           | YES
 |          | eManagement | YES  | -         | -           | YES
-|          | Identifier | YES  | -         | -           | YES
-|          | eIdentifier | YES  | -         | -           | YES
+|          | Identifier | YES  | -         | For Id           | YES
+|          | eIdentifier | YES  | -         | For Id           | YES
 |          | Measurement | YES  | -         | YES         | YES
 |          | Data | YES  | -         | -         | YES
 
