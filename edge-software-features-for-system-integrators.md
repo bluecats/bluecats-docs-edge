@@ -57,25 +57,25 @@ Along with standard network configuration and other OpenWRT options, the followi
 
 ## BlueCats Supported Ad Types
 
-| Protocol | Type | Payload | Proximity | Measurement | BlueCats Management 
-| ---      | ---  | ---     | ---       | ---         | --- 
-| Apple    | iBeacon | YES  | YES       | For Id      | - 
-| Eddystone| UID     | YES  | YES       | For Id      | - 
-|          | URL     | YES  | YES       | -           | - 
-|          | TLM     | YES  | -         | -           | - 
-|          | EID     | YES  | -         | -           | -
-|          | eTLM    | YES  | -         | -           | -
-| BlueCats | iBeacon | YES  | YES       | For Id      | YES
-|          | Secure  | YES  | YES       | For Id      | YES
-|          | Data    | YES  | -         | -           | YES
-|          | Newborn | YES  | -         | -           | YES
-|          | Unconfigured | YES  | -         | -           | YES
-|          | Management | YES  | -         | -           | YES
-|          | eManagement | YES  | -         | -           | YES
-|          | Identifier | YES  | -         | For Id           | YES
-|          | eIdentifier | YES  | -         | For Id           | YES
-|          | Measurement | YES  | -         | YES         | YES
-|          | Data | YES  | -         | -         | YES
+| Protocol | Type | Id | Payload | Proximity | Measurement | BlueCats Management 
+| ---      | ---  | --- | ---     | ---       | ---         | --- 
+| Apple    | iBeacon | Y | YES  | YES       | For Id      | - 
+| Eddystone| UID     | Y | YES  | YES       | For Id      | - 
+|          | URL     | - | YES  | YES       | -           | - 
+|          | TLM     | - | YES  | -         | -           | - 
+|          | EID     | Y*| YES  | -         | -           | -
+|          | eTLM    | - | YES  | -         | -           | -
+| BlueCats | iBeacon | Y | YES  | YES       | For Id      | YES
+|          | Secure  | Y | YES  | YES       | For Id      | YES
+|          | Data    | - | YES  | -         | -           | YES
+|          | Newborn | Y | YES  | -         | -           | YES
+|          | Unconfigured | - | YES  | -         | -           | YES
+|          | Management | * | YES  | -         | -           | YES
+|          | eManagement | - | YES  | -         | -           | YES
+|          | Identifier | Y | YES  | -         | For Id           | YES
+|          | eIdentifier | Y | YES  | -         | For Id           | YES
+|          | Measurement | - | YES  | -         | YES         | YES
+|          | Data | - | YES  | -         | -         | YES
 
 
 ## Using Beacon Detection Data
