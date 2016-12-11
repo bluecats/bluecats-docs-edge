@@ -235,6 +235,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
 - BeaconIdentifier - iBeacon key, UID, BC Identifier
 - RSSI - Received Signal Strength Indicator in dBm
+- BatteryLevel - Current battery level %
 - FirmwareIdentifier - unique identifier for the firmware currently installed on the beacon
 - SettingsVersion - incrementing version number of beacon configuration changes (0-255)
 - Timestamp - Nanoseconds since Epoch
@@ -242,7 +243,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,500000A1,13,1480314351666436
+E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,87,500000A1,13,1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
@@ -253,6 +254,7 @@ Example: JSON (for MQTT,UDP)
     BeaconMAC:"A0E6F854703A",
     BeaconIdentifier:"61687109905F443691F8E602F514C96D00040F82",
     RSSI:-63,
+    BatteryLevel: 87,
     FirmwareIdentifier: "500000A1",
     SettingsVersion:13,
     Timestamp:1480314351666436
