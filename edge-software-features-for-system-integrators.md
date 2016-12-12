@@ -130,7 +130,7 @@ Any BLE packet matching packet filters will be forwarded with the following data
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device
 - RSSI - Received Signal Strength Indicator in dBm
 - Timestamp - Nanoseconds since Epoch
-- Payload - Full advertisement data
+- AdData - Full advertisement data
 
 | Field            | Example
 | ---              | ---
@@ -138,13 +138,13 @@ Any BLE packet matching packet filters will be forwarded with the following data
 | BLE MAC Address  | A0E6F854703A
 | RSSI             | -53
 | Timestamp        | 1480314352373689
-| BLE Payload      | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
+| BLE AdData       | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
 Example: CSV (for UDP)
 
 e.g. 
 ```
-E4956E40DFCF,A0E6F854703A,-63,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+BCAdData, E4956E40DFCF,A0E6F854703A,-63,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 ```
 Example: Serialised C Struct (for UDP)
 
@@ -155,7 +155,7 @@ Example: JSON (for MQTT,UDP)
     BeaconMAC:"A0E6F854703A",
     RSSI:-63,
     Timestamp:1480314351666436
-    Payload:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
+    AdData:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
 }
 ```
 
@@ -166,7 +166,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, UID, BC Identifier
+- BeaconIdentifier - iBeacon key, UID, BC Identifier, Private MAC Address
 - RSSI - Received Signal Strength Indicator in dBm
 - MPow - Measured power at 1 metre
 - Accuracy - Calculated accuracy (estimated distance in metres) based on RSSI and measured power
@@ -175,7 +175,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-63,1.00,1480314351666436
+BCProximity, E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-63,1.00,1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
@@ -184,7 +184,11 @@ Example: JSON (for MQTT,UDP)
     EdgeMAC:"E4956E40DFCF",
     EdgeName:"Level 6 North",
     BeaconMAC:"A0E6F854703A",
-    BeaconIdentifier:"61687109905F443691F8E602F514C96D00040F82",
+    BeaconIdentifier:{
+    	Type: "iBeacon",
+	ProximityUUID: "61687109905F443691F8E602F514C96D",
+	Major: 4,
+	Minor: 1243 },
     RSSI:-63,
     MPow:-63,
     Accuracy:1.00
@@ -207,7 +211,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,05ABFF,1480314351666436
+BCMeasurement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,01,05ABFF,1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
@@ -216,12 +220,16 @@ Example: JSON (for MQTT,UDP)
     EdgeMAC:"E4956E40DFCF",
     EdgeName:"Level 6 North",
     BeaconMAC:"A0E6F854703A",
-    BeaconIdentifier:"61687109905F443691F8E602F514C96D00040F82",
+    BeaconIdentifier:{
+    	Type: "iBeacon",
+	ProximityUUID: "61687109905F443691F8E602F514C96D",
+	Major: 4,
+	Minor: 1243 },
     RSSI:-63,
-    MeasurementData:[{
+    Measurement:{
     	Type : "01",
-	Data : [45.6534535]
-    }],
+	Data : [0.5,1.0,0.5]
+    },
     Timestamp:1480314351666436
 }
 ```
@@ -243,7 +251,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,87,500000A1,13,1480314351666436
+BCManagement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,87,500000A1,13,1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
