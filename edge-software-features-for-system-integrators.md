@@ -169,7 +169,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - BeaconIdentifier - iBeacon key, UID, BC Identifier
 - RSSI - Received Signal Strength Indicator in dBm
 - MPow - Measured power at 1 metre
-- Accuracy - Calculated accuracy based on RSSI and measured power
+- Accuracy - Calculated accuracy (estimated distance in metres) based on RSSI and measured power
 - Timestamp - Nanoseconds since Epoch
 
 Example: CSV (for UDP)
