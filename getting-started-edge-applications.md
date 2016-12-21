@@ -1,5 +1,14 @@
 # BlueCats Edge Applications - Overview
 
+- [BlueCats Edge Applications](#bluecats-edge-applications---overview)
+- [Live View](#live-view)
+- [Configure Endpoints](#configure-endpoints)
+- [Configure Applications](#configure-applications)
+    - [Scan and Forward](#application---scan-and-forward)
+    - [Proximity](#application---proximity)
+    - [Sensor Measurement](#application---sensor-measurement)
+    - [BlueCats Beacon Health](#application---bluecats-beacon-health)
+
 BlueCats Edge provides default applications for common BLE scanning use cases. This ranges from simple scan and forward of any BLE advertisments in range of the Edge to detection, filtering and parsing of advertisements ready to apply to proximity, sensor measurement or beacon network monitoring solutions. With the Edge you can:
 
 - Configure network settings for connectivity to local network and the internet. The BlueCats Edge is a Wireless Access Point providing advanced network configuration options if required.
