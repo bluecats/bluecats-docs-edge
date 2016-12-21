@@ -15,21 +15,34 @@ For each application the endpoint type (UDP or MQTT), message format (CSV or JSO
 
 ## Edge Configuration
 
-Once you have connected.
+Once you have [connected to the Edge and configured network settings](getting-started-connect.md) you can manage bluetooth scanning applications on the Edge.
 
 ### Live View
+
+Live view provides a simple list of BLE devices detected in range of the Edge along with their current RSSI (signal strength).
 
 ![Live View](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png "Live View")
 
 ### Configure Endpoints
 
+To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support two types of endpoint - UDP or MQTT.
+
 ![Endpoints](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Menu.png "Endpoints")
 
+Configure one or both of the endpoint options. Currently the Edge only supports a single endpoint for each type. Data will only be sent the configured endpoint when an Edge application has been enabled and that endpoint type selected.
+
+### UDP
+To configure UDP simply enter the PORT and IP where the data should be sent.
+
 ![Endpoints](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration.png "Endpoints")
+
+A simple MQTT endpoint without TLS enabled just requires the host/IP and port of the MQTT server and the 'TLS Enabled' set to `0`. Some MQTT endpoints such as AWS IoT require TLS for connections. Here you will need to upload the Certificate, Private Key and Certificate Authority [generated in the AWS console](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
 
 ![Endpoints](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Certificates.png "MQTT Certificates")
 
 ## Configure Applications
+
+The BlueCats Edge provides four default applications plus some global BLE device filter rules. One or more of these can be enabled and configured individually.
 
 ![Applications](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Menu.png "Applications")
 
