@@ -1,6 +1,10 @@
-# BlueCats Internal Documentation
+# Getting Started with BlueCats Edge
 
-## BlueCats Edge
-
-- [Feaure Overview of Edge for System Integrators](edge-software-features-for-system-integrators.md)
-- [Getting Started with Edge for System Integrators](getting-started-with-bluecats-edge.md)
+- [BlueCats Edge Applications](#bluecats-edge-applications---overview)
+- [Live View](#live-view)
+- [Configure Endpoints](#configure-endpoints)
+- [Configure Applications](#configure-applications)
+    - [Scan and Forward](#application---scan-and-forward)
+    - [Proximity](#application---proximity)
+    - [Sensor Measurement](#application---sensor-measurement)
+    - [BlueCats Beacon Health](#application---bluecats-beacon-health)
