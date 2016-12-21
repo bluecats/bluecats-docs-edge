@@ -34,7 +34,7 @@ Configure one or both of the endpoint options. Currently the Edge only supports 
 ### UDP
 To configure UDP simply enter the PORT and IP where the data should be sent.
 
-<p style="text-align:center" align="center"><img style="max-width:400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration.png" alt="Endpoints"/></p>
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration.png" alt="Endpoints"/></p>
 
 A simple MQTT endpoint without TLS enabled just requires the host/IP and port of the MQTT server and the 'TLS Enabled' set to `0`. Some MQTT endpoints such as AWS IoT require TLS for connections. Here you will need to upload the Certificate, Private Key and Certificate Authority [generated in the AWS console](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
 
@@ -44,11 +44,11 @@ A simple MQTT endpoint without TLS enabled just requires the host/IP and port of
 
 The BlueCats Edge provides four default applications plus some global BLE device filter rules. One or more of these can be enabled and configured individually.
 
-![Applications](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Menu.png "Applications")
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Menu.png" alt="Applications"/></p>
 
 ### Application - Scan and Forward
 
-![Applications - Scan and Forward](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-ScanAndForward.png "Applications - Scan and Forward")
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-ScanAndForward.png" alt="Scan and Forward"/></p>
 
 Any BLE packet matching packet filters will be forwarded with the following data:
 
@@ -86,7 +86,7 @@ Example: JSON (for MQTT,UDP)
 ```
 
 ### Application - Proximity
-![Applications - Proximity](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Proximity.png "Applications - Proximity")
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Proximity.png" alt="Applications - Proximity"/></p>
 
 BLE packet matching packet filters will be forwarded with the following data:
 
@@ -254,11 +254,8 @@ MAC or Custom Identifier included in the payload may be either encrypted or plai
 
 When BLE advertisements are received from each scan they can be filtered using one or more rules.
 
-- BT Address Pattern/Mask e.g. 0007/FFFF would match any beacon with a public Bluetooth address starting with 0007
-- Generic Payload Pattern/Mask e.g. 000000FF/00000041 for BC Ads
-- Include any BlueCats Ad matching BC Team ID
-- Include any BlueCats Ad
-- Include only selected Ad Type/s
 - Only ads with a minimum received signal strength indicator (RSSI)
+- BT Address Pattern/Mask e.g. 0007/FFFF would match any beacon with a public Bluetooth address starting with 0007
+- Generic BLE Advertisement Pattern/Mask e.g. 000000FF/00000041 for BC Ads
 
 
