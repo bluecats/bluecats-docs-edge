@@ -148,7 +148,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 Example: CSV (for UDP)
 
 ```
-BCMeasurement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,07,[22.5]:[0.05:0.05:0.05]:[270:90],1480314351666436
+BCMeasurement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,0x07,[22.50]:[0.050:0.050:0.050]:[270.00:90.00],1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
@@ -165,13 +165,13 @@ Example: JSON (for MQTT,UDP)
     RSSI:-63,
     Measurement:[{
     	Type : 1,
-	Data : [22.5]
+	Data : [22.50]
     },{
     	Type : 2,
-	Data : [0.05,0.05,0.05]
+	Data : [0.050,0.050,0.050]
     },{
         Type : 4,
-	Data : [270, 90]
+	Data : [270.00, 90.00]
 
     }],
     Timestamp:1480314351666436
