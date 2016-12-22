@@ -12,11 +12,11 @@
 
 ### Configuring Applications
 
-- [BlueCats Edge Applications](#bluecats-edge-applications---overview)
-- [Live View](#live-view)
-- [Configure Endpoints](#configure-endpoints)
-- [Configure Applications](#configure-applications)
-    - [Scan and Forward](#application---scan-and-forward)
-    - [Proximity](#application---proximity)
-    - [Sensor Measurement](#application---sensor-measurement)
-    - [BlueCats Beacon Health](#application---bluecats-beacon-health)
+- [BlueCats Edge Applications](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#bluecats-edge-applications---overview)
+- [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#live-view)
+- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-endpoints)
+- [Configure Applications](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-applications)
+    - [Scan and Forward](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---scan-and-forward)
+    - [Proximity](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---proximity)
+    - [Sensor Measurement](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---sensor-measurement)
+    - [BlueCats Beacon Health](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---bluecats-beacon-health)
