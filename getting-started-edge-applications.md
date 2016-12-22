@@ -267,4 +267,38 @@ When BLE advertisements are received from each scan they can be filtered using o
 - BT Address Pattern/Mask e.g. 0007/FFFF would match any beacon with a public Bluetooth address starting with 0007
 - Generic BLE Advertisement Pattern/Mask e.g. 000000FF/00000041 for BC Ads
 
+## Example - Receiving data with a simple UDP server
 
+Once the Edge has been configured to send messages over UDP to a port and IP, a simple client can be set up to listen for the messages.
+
+To receive the data we will need to set up a local UDP client to listen on the port configured for the UDP endpoint. Here is an example in Python:
+
+```python
+import socket
+from datetime import datetime
+
+UDP_IP = "0.0.0.0"
+UDP_PORT = 9942
+
+sock = socket.socket(socket.AF_INET, # Internet
+                     socket.SOCK_DGRAM) # UDP
+sock.bind((UDP_IP, UDP_PORT))
+
+while True:
+    data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
+    print datetime.now(), " -UDP- ", data
+```
+After [installing python](https://www.python.org/downloads/) (this example is for Python 2.7) and saving this script to a text file name `udp-server.py` this can then be run from the console using:
+
+`<path to your python installation>/python.exe udp-server.py`
+
+and each received message will be printed to the console e.g.
+
+```
+2016-11-28 17:25:51.569708  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-63,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+2016-11-28 17:25:51.673411  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-51,1480314351770220,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+2016-11-28 17:25:51.788579  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-51,1480314351885285,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+2016-11-28 17:25:51.898095  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-54,1480314351994814,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+2016-11-28 17:25:51.956482  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-57,1480314352053244,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+2016-11-28 17:25:52.074793  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-62,1480314352171590,02010614FF04010997BD34DB5E40A7346BC6F681F1D3D50A
+```
