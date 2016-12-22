@@ -18,11 +18,11 @@ Note the assigned IP address for later (in this case `192.168.8.147`) as this wi
 
 Each edge runs a local web configuration tool to manage both network configuration and BlueCats BLE scanning settings. After your computer has connected to the Edge over Ethernet, navigate to the Edge's IP address `192.168.8.1` using your web browser.
 
-You will be prompted to log in with the root user credentials. The default login details are:
+You will be prompted to log in with the root user credentials.
 
 Username: `root`
 
-Password: `bluecats`
+Password is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/Login.png "Log in")
 
@@ -98,14 +98,14 @@ Download the package files to your local computer:
 
 Use secure copy to transfer to the Edge:
 
-scp path-to-your-files/luci-base.ipk root@192.168.8.1:~
-scp path-to-your-files/luci-app-bluecats.ipk root@192.168.8.1:~
+    scp path-to-your-files/luci-base.ipk root@192.168.8.1:~
+    scp path-to-your-files/luci-app-bluecats.ipk root@192.168.8.1:~
 
 SSH into the Edge:
 
-ssh root@192.168.8.1
+    ssh root@192.168.8.1
 
 Then install the packages:
 
-opkg install luci-base.ipk
-opkg install luci-app-bluecats.ipk
+    opkg install luci-base.ipk`
+    opkg install luci-app-bluecats.ipk`
