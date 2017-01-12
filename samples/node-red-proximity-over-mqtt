@@ -1,5 +1,3 @@
-
-
 # Edge Relay Configuration
 
 - Configure MQTT Endpoint in Bluecats app pointed to the MQTT Broker.
