@@ -3,7 +3,7 @@
 
  - Configure UDP Endpoints in Bluecats app pointed to node-red machine.
  
- ![edge-endpoint-udp-config](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/edge-endpoint-udp-config.png)
+ <p style="text-align:center" align="center"><img style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/edge-endpoint-udp-config.png" alt="Endpoint UDP"/></p>
  
  - Configure the Sensor Measurement tab to send measurement data in JSON format over UDP to the node-red machine. 
 
