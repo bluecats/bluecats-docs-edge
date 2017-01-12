@@ -8,7 +8,7 @@
     - [Proximity](#application---proximity)
     - [Sensor Measurement](#application---sensor-measurement)
     - [BlueCats Beacon Health](#application---bluecats-beacon-health)
-- [Example UDP Client](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
+- [Example UDP Server](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 
 BlueCats Edge provides default applications for common BLE scanning use cases. This ranges from simple scan and forward of any BLE advertisments in range of the Edge to detection, filtering and parsing of advertisements ready to apply to proximity, sensor measurement or beacon network monitoring solutions. With the Edge you can:
 
@@ -277,9 +277,9 @@ When BLE advertisements are received from each scan they can be filtered using o
 
 ## Example - Receiving data with a simple UDP server
 
-Once the Edge has been configured to send messages over UDP to a port and IP, a simple client can be set up to listen for the messages.
+Once the Edge has been configured to send messages over UDP to a port and IP, a simple server applicaiton can be set up to listen for the messages.
 
-To receive the data we will need to set up a local UDP client to listen on the port configured for the UDP endpoint. Here is an example in Python:
+To receive the data we will need to set up a local UDP server to listen on the port configured for the UDP endpoint. Here is an example in Python:
 
 ```python
 import socket
@@ -310,3 +310,7 @@ and each received message will be printed to the console e.g.
 2016-11-28 17:25:51.956482  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-57,1480314352053244,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 2016-11-28 17:25:52.074793  -UDP-  BCAdData,E4956E40DFCF,A0E6F854703A,-62,1480314352171590,02010614FF04010997BD34DB5E40A7346BC6F681F1D3D50A
 ```
+
+## Using 3rd party UDP servers to view BLE traffic
+
+If you don't have a coding background, then a free UDP server application like [PacketSender](https://packetsender.com/) will show you all the data being sent from the Edge Relay to your computer *(remember to set the IP address and port in end point configuration)*.
