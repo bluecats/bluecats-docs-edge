@@ -1,6 +1,9 @@
-# Edge Relay Configuration
+# Send Proximity Data to a MQTT Broker
+In this sample scenario, the edge relay sends proximity data to a mqtt broker (i.e. Mosquitto, HiveMQ, RabbitMQ etc.) and the node-red flow connects to the broker and visualise the data in a dashboard. 
 
-- [Configure MQTT Endpoint](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-endpoints) in Edge Relay pointed to the MQTT Broker. Enter Host/IP and port of the mqtt broker. For simple mqtt brokers which need ip and port, keep TLS Enabled 0. 
+## Edge Relay Configuration
+
+- [Configure MQTT Endpoint](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-endpoints) in Edge Relay pointed to the MQTT Broker. Enter Host/IP and port of the mqtt broker. 
 
 <p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/edge-endpoint-mqtt.png" alt="Endpoint MQTT"/></p>
 
@@ -8,7 +11,7 @@
 
 <p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/edge-mqtt-proximity.png" alt="proximity MQTT"/></p>
 
-# Node-red Configuration
+## Node-red Configuration
 
  - Install additional nodes
 	 - [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
