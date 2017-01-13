@@ -15,8 +15,6 @@ In this sample scenario, the edge relay sends measurement data over UDP to a nod
 
  - Install additional nodes
 	 - [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
-	 
-	 The UI interface is available at *http://{node-red-ip}:1880/ui*
  
  - Create the node-red flow
  
