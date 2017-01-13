@@ -74,6 +74,24 @@ Now that your Edge is connected to your location machine or network start config
 
 ## Troubleshooting
 
+### DHCP issues when connecting to multiple Edges using Ethernet
+
+When swapping between multiple Edges using a local Ethernet connection to your computer (in this case a MacBook running OSX) you may encounter DHCP issues with network errors such as 'Unable to assign IP' when attempting to connect to the second Edge. One work around is to reset the local DHCP client. This can be done in OSX via System Preferences -> Network, by first switching to BOOTP (and apply) and then switch back to DHCP (and apply). The Edge may also need to be rebooted to successfully assign an IP address.
+
+Change to BOOTP and Apply (this is just to allow us to switch back to DHCP)
+![SET BOOTP](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/Troubleshoot-BOOTP.png "Set BootP")
+
+Change back to DHCP and Apply
+![Set DHCP](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/Troubleshoot-DHCP.png "Set DHCP")
+
+Reboot the Edge and an IP address should be successfully assigned to your computer.
+
+The above can also be achieved via Terminal:
+
+Run `ifconfig` command in Terminal to determine active ethernet interface, in this case 'en5'
+Run the following in terminal, where 'en5' is the ethernet interface:
+`sudo ipconfig set en5 DHCP`
+
 ### Viewing local logs
 
 The local device logs can be used to see if beacons are being detected and if they are being successfully sent to the configured endpoint. For example the following logs show that the UDP endpoint is not available:
