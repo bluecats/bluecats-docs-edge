@@ -38,7 +38,7 @@ In this sample scenario, the edge relay sends measurement data to AWS IoT mqtt b
 		
 		<p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/node-red-mqtt-node-add.png" alt="New AWS IoT"/></p>
 		
-		- Select Type, Region and enter client ID.
+		- Select Type and Region. Enter the client ID which can be found as a part of the certicatfe file name. 
 
 		- Upload aws certificate files to a location where the node-red can access.
 
