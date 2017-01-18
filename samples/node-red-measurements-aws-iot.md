@@ -8,7 +8,7 @@ In this sample scenario, the edge relay sends measurement data to AWS IoT mqtt b
 - [Register a device in the thing registry.](http://docs.aws.amazon.com/iot/latest/developerguide/register-device.html)
 - [Create and activate a device certificate.](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html)
 - [Create and attach an AWS IoT policy to a device certificate.](http://docs.aws.amazon.com/iot/latest/developerguide/attach-iot-policy.html)
-- [Attch the certiciate to the Thing.](http://docs.aws.amazon.com/iot/latest/developerguide/attach-cert-thing.html)
+- [Attach the certificate to the Thing.](http://docs.aws.amazon.com/iot/latest/developerguide/attach-cert-thing.html)
 
 
 ## Edge Relay Configuration
