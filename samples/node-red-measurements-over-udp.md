@@ -1,4 +1,4 @@
-# Send data over UDP
+# Send measurement data over UDP
 In this sample scenario, the edge relay sends measurement data over UDP to a node-red machine and visualise the data in a dashboard. 
 
 ## Edge Relay Configuration
