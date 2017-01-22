@@ -1,4 +1,4 @@
-# About
+# About Node-red
 Node-red is a visual tool for wiring together hardware devices, APIs and online services. It is built on node.js, a server side JavaScript platform that uses an event driven, non-blocking model suited to create real-time applications that run across distributed devices.
 
 # Installation
