@@ -14,7 +14,7 @@ In this sample scenario, the edge relay sends proximity data to a mqtt broker (i
 ## Node-red Configuration
 
  - Install additional nodes
-	 - [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
+	 - Install [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) if it is not installed before.
 
  - Create the node-red flow
  
