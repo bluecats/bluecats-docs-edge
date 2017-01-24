@@ -27,7 +27,7 @@ In this sample scenario, the edge relay sends measurement data to AWS IoT mqtt b
 
 ## Node-red configuration
 
-- Install additional nodes
+- Install the following additional nodes if they are not installed before
 	- [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
 
 	- [node-red-contrib-aws-iot-hub](https://flows.nodered.org/node/node-red-contrib-aws-iot-hub)
