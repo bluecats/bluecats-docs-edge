@@ -313,4 +313,4 @@ and each received message will be printed to the console e.g.
 
 ## Using 3rd party UDP servers to view BLE traffic
 
-If you don't have a coding background, then a free UDP server application like [PacketSender](https://packetsender.com/) will show you all the data being sent from the Edge Relay to your computer *(remember to set the IP address and port in end point configuration)*.
+If you don't have a coding background, then a free UDP server application like [PacketSender](https://packetsender.com/) will show you all the data being sent from the Edge Relay to your computer *(remember to set the IP address and port in [end point configuration](#getting-started-edge-applications.md#udp))*.
