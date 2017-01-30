@@ -28,7 +28,7 @@
 - Location Distributer
 	- Endpoints
 	- Throttling
-- Receiving Locations
+- Locations
 	- Local MQTT
 	- Cloud MQTT
 
