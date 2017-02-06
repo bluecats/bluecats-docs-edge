@@ -135,5 +135,5 @@ SSH into the Edge:
 
 Then install the packages:
 
-    opkg install luci-base.ipk`
-    opkg install luci-app-bluecats.ipk`
+    opkg install luci-base.ipk
+    opkg install luci-app-bluecats.ipk
