@@ -65,33 +65,38 @@ Any BLE packet matching packet filters will be forwarded with the following data
 - EdgeMAC - Hardware MAC address of the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device
 - RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
 - Timestamp - Nanoseconds since Epoch
-- AdData - Full advertisement data
+- AdData - Full advertisement data payload
 
 | Field            | Example
 | ---              | ---
+| Message Type     | BCAdData (CSV only)
+| Message Version  | 1 (CSV only to track format changes)
 | Edge MAC Address | E4956E40DFCF
 | BLE MAC Address  | A0E6F854703A
-| RSSI             | -53
+| RSSI             | -63
+| RSSI Smooth      | -62
 | Timestamp        | 1480314352373689
-| BLE AdData       | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
+| AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
 Example: CSV (for UDP)
 
 e.g. 
 ```
-BCAdData, E4956E40DFCF,A0E6F854703A,-63,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+BCAdData,1,E4956E40DFCF,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 ```
 Example: Serialised C Struct (for UDP)
 
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"E4956E40DFCF",
-    BeaconMAC:"A0E6F854703A",
-    RSSI:-63,
-    Timestamp:1480314351666436
-    AdData:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
+    edgeMAC:"E4956E40DFCF",
+    beaconMAC:"A0E6F854703A",
+    rssi:-63,
+    rssiSmooth:-62,
+    timestamp:1480314351666436
+    adData:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
 }
 ```
 
@@ -100,36 +105,44 @@ Example: JSON (for MQTT,UDP)
 
 BLE packet matching packet filters will be forwarded with the following data:
 
+- Message Type (CSV only) 
+- Message Version  | 1 (CSV only to track format changes)
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
 - BeaconIdentifier - iBeacon key, UID, BC Identifier, Private MAC Address
 - RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
 - MPow - Measured power at 1 metre
-- Accuracy - Calculated accuracy (estimated distance in metres) based on RSSI and measured power
+- Accuracy - Calculated accuracy (estimated distance in metres) based on smooth RSSI and measured power
 - Timestamp - Nanoseconds since Epoch
 
 Example: CSV (for UDP)
 
 ```
-BCProximity, E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-63,1.00,1480314351666436
+BCProximity,1, E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-62,-62,1.00,1480314351666436
 ```
 
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"E4956E40DFCF",
-    EdgeName:"Level 6 North",
-    BeaconMAC:"A0E6F854703A",
-    BeaconIdentifier:{
-    	Type: "iBeacon",
-	ProximityUUID: "61687109905F443691F8E602F514C96D",
-	Major: 4,
-	Minor: 1243 },
-    RSSI:-63,
-    MPow:-63,
-    Accuracy:1.00
-    Timestamp:1480314351666436
+    edgeMAC:"E4956E40DFCF",
+    edgeName:"Level 6 North",
+    beaconMAC:"A0E6F854703A",
+    beaconIdentifiers:[{
+    	type: "iBeacon",
+	proximityUUID: "61687109905F443691F8E602F514C96D",
+	major: 4,
+	minor: 1243 },{
+    	type: "eddystoneUID",
+	namespace: "61687109905F443691F8E602F514C96D",
+	instanceID: 4,
+	minor: 1243 }],
+    rssi:-63,
+    rssiSmooth:-62,
+    mPow:-62,
+    accuracy:1.00
+    timestamp:1480314351666436
 }
 ```
 
@@ -142,6 +155,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
 - BeaconIdentifier - iBeacon key, UID, BC Identifier
 - RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
 - MeasurementData - sensor measurement received from the beacon
 - Timestamp - Nanoseconds since Epoch
 
@@ -154,27 +168,28 @@ BCMeasurement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"E4956E40DFCF",
-    EdgeName:"Level 6 North",
-    BeaconMAC:"A0E6F854703A",
-    BeaconIdentifier:{
-    	Type: "iBeacon",
-	ProximityUUID: "61687109905F443691F8E602F514C96D",
-	Major: 4,
-	Minor: 1243 },
-    RSSI:-63,
-    Measurement:[{
-    	Type : 1,
-	Data : [22.50]
+    edgeMAC:"E4956E40DFCF",
+    edgeName:"Level 6 North",
+    beaconMAC:"A0E6F854703A",
+    beaconIdentifiers:[{
+    	type: "iBeacon",
+	proximityUUID: "61687109905F443691F8E602F514C96D",
+	major: 4,
+	minor: 1243 }],
+    rssi:-63,
+    rssiSmooth:-63,
+    measurements:[{
+    	type : 1,
+	data : [22.50]
     },{
-    	Type : 2,
-	Data : [0.050,0.050,0.050]
+    	type : 2,
+	data : [0.050,0.050,0.050]
     },{
-        Type : 4,
-	Data : [270.00, 90.00]
+        type : 4,
+	data : [270.00, 90.00]
 
     }],
-    Timestamp:1480314351666436
+    timestamp:1480314351666436
 }
 ```
 
@@ -201,15 +216,20 @@ BCManagement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F5
 Example: JSON (for MQTT,UDP)
 ```
 {
-    EdgeMAC:"E4956E40DFCF",
-    EdgeName:"Level 6 North",
-    BeaconMAC:"A0E6F854703A",
-    BeaconIdentifier:"61687109905F443691F8E602F514C96D00040F82",
-    RSSI:-63,
-    BatteryLevel: 87,
-    FirmwareIdentifier: "500000A1",
-    SettingsVersion:13,
-    Timestamp:1480314351666436
+    edgeMAC:"E4956E40DFCF",
+    edgeName:"Level 6 North",
+    beaconMAC:"A0E6F854703A",
+    beaconIdentifiers:[{
+    	type: "iBeacon",
+	proximityUUID: "61687109905F443691F8E602F514C96D",
+	major: 4,
+	minor: 1243 }],
+    rssi:-63,
+    rssiSmooth:-63,
+    batteryLevel: 87,
+    firmwareIdentifier: "500000A1",
+    settingsVersion:13,
+    timestamp:1480314351666436
 }
 ```
 
