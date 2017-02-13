@@ -110,7 +110,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, UID, BC Identifier, Private MAC Address
+- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
 - RSSI - Received Signal Strength Indicator in dBm
 - RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
 - MPow - Measured power at 1 metre
@@ -129,15 +129,10 @@ Example: JSON (for MQTT,UDP)
     edgeMAC:"E4956E40DFCF",
     edgeName:"Level 6 North",
     beaconMAC:"A0E6F854703A",
-    beaconIdentifiers:[{
-    	type: "iBeacon",
-	proximityUUID: "61687109905F443691F8E602F514C96D",
-	major: 4,
-	minor: 1243 },{
-    	type: "eddystoneUID",
-	namespace: "61687109905F443691F8E602F514C96D",
-	instanceID: 4,
-	minor: 1243 }],
+    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
+    eddyUID: "61687109E602F514C96D000000000001",
+    privateMAC: "A0E6F854703A",
+    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
     rssi:-63,
     rssiSmooth:-62,
     mPow:-62,
@@ -155,7 +150,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, UID, BC Identifier
+- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
 - RSSI - Received Signal Strength Indicator in dBm
 - RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
 - MeasurementData - sensor measurement received from the beacon
@@ -173,11 +168,10 @@ Example: JSON (for MQTT,UDP)
     edgeMAC:"E4956E40DFCF",
     edgeName:"Level 6 North",
     beaconMAC:"A0E6F854703A",
-    beaconIdentifiers:[{
-    	type: "iBeacon",
-	proximityUUID: "61687109905F443691F8E602F514C96D",
-	major: 4,
-	minor: 1243 }],
+    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
+    eddyUID: "61687109E602F514C96D000000000001",
+    privateMAC: "A0E6F854703A",
+    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
     rssi:-63,
     rssiSmooth:-63,
     measurements:[{
@@ -202,7 +196,7 @@ BLE packet matching packet filters will be forwarded with the following data:
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - User defined description for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, UID, BC Identifier
+- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
 - RSSI - Received Signal Strength Indicator in dBm
 - BatteryLevel - Current battery level %
 - FirmwareIdentifier - unique identifier for the firmware currently installed on the beacon
@@ -221,11 +215,10 @@ Example: JSON (for MQTT,UDP)
     edgeMAC:"E4956E40DFCF",
     edgeName:"Level 6 North",
     beaconMAC:"A0E6F854703A",
-    beaconIdentifiers:[{
-    	type: "iBeacon",
-	proximityUUID: "61687109905F443691F8E602F514C96D",
-	major: 4,
-	minor: 1243 }],
+    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
+    eddyUID: "61687109E602F514C96D000000000001",
+    privateMAC: "A0E6F854703A",
+    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
     rssi:-63,
     rssiSmooth:-63,
     batteryLevel: 87,
@@ -273,8 +266,9 @@ MAC or Custom Identifier included in the payload may be either encrypted or plai
 ### Proximity / Location Data
 
 - RSSI (Received Signal Strength Indicator)
+- RSSI Smooth. This filters multiple signal strength readings to produce a signal strength reading which is more stable.
 - MeasuredPower / Tx Power
-- Accuracy (calculated from RSSI and MPower)
+- Accuracy (calculated from RSSI Smooth and MPower). This is an approximate conversion of signal strength to a distance in metres.
 
 ### Sensor Measurement Data
 
