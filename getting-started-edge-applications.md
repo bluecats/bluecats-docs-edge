@@ -63,6 +63,7 @@ The BlueCats Edge provides four default applications plus some global BLE device
 Any BLE packet matching packet filters will be forwarded with the following data:
 
 - EdgeMAC - Hardware MAC address of the Edge
+- EdgeName - A user defined name for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device
 - RSSI - Received Signal Strength Indicator in dBm
 - RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
@@ -74,6 +75,7 @@ Any BLE packet matching packet filters will be forwarded with the following data
 | Message Type     | BCAdData (CSV only)
 | Message Version  | 1 (CSV only to track format changes)
 | Edge MAC Address | E4956E40DFCF
+| Edge Name        | Edge-abc
 | BLE MAC Address  | A0E6F854703A
 | RSSI             | -63
 | RSSI Smooth      | -62
@@ -84,19 +86,20 @@ Example: CSV (for UDP)
 
 e.g. 
 ```
-BCAdData,1,E4956E40DFCF,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 ```
 Example: Serialised C Struct (for UDP)
 
 Example: JSON (for MQTT,UDP)
 ```
 {
-    edgeMAC:"E4956E40DFCF",
-    beaconMAC:"A0E6F854703A",
-    rssi:-63,
-    rssiSmooth:-62,
-    timestamp:1480314351666436
-    adData:"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
+    "edgeMAC:"E4956E40DFCF",
+    "edgeName:"Edge-abc",
+    "beaconMAC":"A0E6F854703A",
+    "rssi":-63,
+    "rssiSmooth":-62,
+    "timestamp":1480314351666436
+    "adData":"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
 }
 ```
 
@@ -126,18 +129,18 @@ BCProximity,1, E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F
 Example: JSON (for MQTT,UDP)
 ```
 {
-    edgeMAC:"E4956E40DFCF",
-    edgeName:"Level 6 North",
-    beaconMAC:"A0E6F854703A",
-    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
-    eddyUID: "61687109E602F514C96D000000000001",
-    privateMAC: "A0E6F854703A",
-    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
-    rssi:-63,
-    rssiSmooth:-62,
-    mPow:-62,
-    accuracy:1.00
-    timestamp:1480314351666436
+    "edgeMAC":"E4956E40DFCF",
+    "edgeName":"Level 6 North",
+    "beaconMAC":"A0E6F854703A",
+    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
+    "eddyUID": "61687109E602F514C96D000000000001",
+    "privateMAC": "A0E6F854703A",
+    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
+    "rssi":-63,
+    "rssiSmooth":-62,
+    "mPow":-62,
+    "accuracy":1.00
+    "timestamp":1480314351666436
 }
 ```
 
@@ -165,27 +168,27 @@ BCMeasurement,1,E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602
 Example: JSON (for MQTT,UDP)
 ```
 {
-    edgeMAC:"E4956E40DFCF",
-    edgeName:"Level 6 North",
-    beaconMAC:"A0E6F854703A",
-    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
-    eddyUID: "61687109E602F514C96D000000000001",
-    privateMAC: "A0E6F854703A",
-    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
-    rssi:-63,
-    rssiSmooth:-63,
-    measurements:[{
-    	type : 1,
-	data : [22.50]
+    "edgeMAC":"E4956E40DFCF",
+    "edgeName":"Level 6 North",
+    "beaconMAC":"A0E6F854703A",
+    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
+    "eddyUID": "61687109E602F514C96D000000000001",
+    "privateMAC": "A0E6F854703A",
+    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
+    "rssi":-63,
+    "rssiSmooth":-63,
+    "measurements":[{
+    	"type" : 1,
+	"data" : [22.50]
     },{
-    	type : 2,
-	data : [0.050,0.050,0.050]
+    	"type" : 2,
+	"data" : [0.050,0.050,0.050]
     },{
-        type : 4,
-	data : [270.00, 90.00]
+        "type" : 4,
+	"data" : [270.00, 90.00]
 
     }],
-    timestamp:1480314351666436
+    "timestamp":1480314351666436
 }
 ```
 
@@ -212,19 +215,19 @@ BCManagement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F5
 Example: JSON (for MQTT,UDP)
 ```
 {
-    edgeMAC:"E4956E40DFCF",
-    edgeName:"Level 6 North",
-    beaconMAC:"A0E6F854703A",
-    iBeacon: "61687109905F443691F8E602F514C96D00040F82",
-    eddyUID: "61687109E602F514C96D000000000001",
-    privateMAC: "A0E6F854703A",
-    bcIdentifier: "61687109905F443691F8E602F514C96D00040F82",
-    rssi:-63,
-    rssiSmooth:-63,
-    batteryLevel: 87,
-    firmwareIdentifier: "500000A1",
-    settingsVersion:13,
-    timestamp:1480314351666436
+    "edgeMAC":"E4956E40DFCF",
+    "edgeName":"Level 6 North",
+    "beaconMAC":"A0E6F854703A",
+    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
+    "eddyUID": "61687109E602F514C96D000000000001",
+    "privateMAC": "A0E6F854703A",
+    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
+    "rssi":-63,
+    "rssiSmooth":-63,
+    "batteryLevel": 87,
+    "firmwareIdentifier": "500000A1",
+    "settingsVersion":13,
+    "timestamp":1480314351666436
 }
 ```
 
