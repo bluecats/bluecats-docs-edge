@@ -168,27 +168,39 @@ BCMeasurement,1,E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602
 Example: JSON (for MQTT,UDP)
 ```
 {
-    "edgeMAC":"E4956E40DFCF",
-    "edgeName":"Level 6 North",
-    "beaconMAC":"A0E6F854703A",
-    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
-    "eddyUID": "61687109E602F514C96D000000000001",
-    "privateMAC": "A0E6F854703A",
-    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
-    "rssi":-63,
-    "rssiSmooth":-63,
-    "measurements":[{
-    	"type" : 1,
-	"data" : [22.50]
-    },{
-    	"type" : 2,
-	"data" : [0.050,0.050,0.050]
-    },{
-        "type" : 4,
-	"data" : [270.00, 90.00]
-
-    }],
-    "timestamp":1480314351666436
+  "edgeMAC": "E4956E40DFCF",
+  "edgeName": "Level 6 North",
+  "beaconMAC": "A0E6F854703A",
+  "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
+  "eddyUID": "61687109E602F514C96D000000000001",
+  "privateMAC": "A0E6F854703A",
+  "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
+  "rssi": -63,
+  "rssiSmooth": -63,
+  "measurements": [
+    {
+      "type": 1,
+      "data": [
+        22.50
+      ]
+    },
+    {
+      "type": 2,
+      "data": [
+        0.050,
+        0.050,
+        0.050
+      ]
+    },
+    {
+      "type": 4,
+      "data": [
+        270.00,
+        90.00
+      ]
+    }
+  ],
+  "timestamp": 1480314351666436
 }
 ```
 
