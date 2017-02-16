@@ -18,7 +18,7 @@ The BlueCats Edge kit contains:
 
 ## Connecting to the Edge
 
-Start by plugging the supplied micro-usb cable into the edge and any USB port to power up the device and attach the external bluetooth antenna. Note that it may take 20-30 seconds to complete startup. The easiest way to configure the Edge is to connect it directly to your computer via Ethernet. Connect a straight-through ethernet cable betwen the ethernet port on your computer and the WAN port of the Edge. DHCP is enabled by default so with DHCP selected for your ethernet network adapter, your machine should be assigned an IP address in the range 192.168.8.0 for example:
+Start by plugging the supplied micro-usb cable into the edge and any USB port to power up the device and attach the external bluetooth antenna. Note that it may take 20-30 seconds to complete startup. The easiest way to configure the Edge is to connect it directly to your computer via Ethernet. Connect a straight-through ethernet cable between the ethernet port on your computer and the LAN port of the Edge. DHCP is enabled by default so with DHCP selected for your ethernet network adapter, your machine should be assigned an IP address in the range 192.168.8.0 for example:
 
 ![Connect to Edge using Ethernet](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/010-Connect.png "Connect with Ethernet")
 
@@ -52,7 +52,7 @@ Optionally continue with WIFI setup or Start configuring Edge Applications
 
 The Edge can be configured to send data to another machine on the local WIFI network, or connected to the internet to enable communication to the BlueCats Cloud or to download updated software.
 
-Navigate to `Network` -> `Wireless` in the main menu and the scan for available networks
+Navigate to `Network` -> `Wireless` in the main menu and scan for available networks.
 
 ![Wireless](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-ConfigureWireless.png "Wireless")
 
@@ -70,7 +70,7 @@ Save and apply changes
 
 Once connected to the local WIFI network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WIFI connection while powered.
 
-Now that your Edge is connected to your location machine or network start configuring Edge Applications
+Now that your Edge is connected to your local machine or network, start configuring Edge Applications.
 
 ## Troubleshooting
 
@@ -99,7 +99,7 @@ The local device logs can be used to see if beacons are being detected and if th
 ![View local logs](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/050-View-Logs.png "View Logs")
 
 ### Resetting Edge To Default Firmware When Locked Out
-1. Connect edge WAN into your computer with ethernet cable
+1. Connect edge LAN into your computer with ethernet cable
 2. Unplug edge power
 3. Hold Reset
 4. Plug in power while holding reset. Edge will flash some LEDs, and then start blinking red LED. Let red LED blink 6 times, then let go of reset. You should see the red LED blink fast for 1 sec.
@@ -112,7 +112,7 @@ The local device logs can be used to see if beacons are being detected and if th
 
 ### Updating BlueCats Edge Packages
 #### Using web interface
-There are two ways to update the BlueCats Edge packages to receive updates or after a firmware update. First is via the web GUI. This requires the Edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. Then you can navigate to System -> Software and then under the Action tab there is an input box with 'Download and install package'. You can then paste each of the following links one at a time and hit 'OK'. This will download and install each of the packages.
+There are two ways to update the BlueCats Edge packages to receive updates or after a firmware update. First is via the web GUI. This requires the Edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. Then you can navigate to System -> Software and then under the Actions tab there is an input box with 'Download and install package'. You can then paste each of the following links one at a time and hit 'OK'. This will download and install each of the packages.
 
 Contact support@bluecats.com for download urls for latest packages.
 
