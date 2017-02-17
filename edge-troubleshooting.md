@@ -4,7 +4,7 @@
 
 The local device logs can be used to see if beacons are being detected and if they are being successfully sent to the configured endpoint. For example the following logs show that the UDP endpoint is not available:
 
-<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/050-View-Logs.png" alt="View Logs"/></p>
+<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/050-View-Logs1.png" alt="View Logs"/></p>
 
 ### Resetting Edge To Default Firmware When Locked Out
 1. Connect edge LAN into your computer with ethernet cable
