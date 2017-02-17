@@ -3,12 +3,8 @@
 ### Connecting
 
 - [Connecting](getting-started-connect.md#connecting-to-the-edge)
-- [Logging In](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#logging-in)
-- [Connecting to WIFI](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#connecting-to-internet-via-wifi)
-- [Troubleshooting](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#troubleshooting)
-  - [View Logs](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#viewing-local-logs)
-  - [Reset Edge to Default Firmware](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#resetting-edge-to-default-firmware-when-locked-out)
-  - [Update BlueCats Packages](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-connect.md#updating-bluecats-edge-packages)
+- [Logging In](getting-started-connect.md#logging-in)
+- [Connecting to WIFI](getting-started-connect.md#connecting-to-internet-via-wifi)
 
 ### Configuring Applications
 
@@ -21,3 +17,12 @@
     - [Sensor Measurement](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---sensor-measurement)
     - [BlueCats Beacon Health](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---bluecats-beacon-health)
 - [Example UDP Server](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
+
+### Updating Firmware and Packages
+- [Flashing  New Firmaware] (edge-update-firmware.md#flashing-new-firmware)
+- [Update BlueCats Packages](edge-update-firmware.md#updating-bluecats-edge-packages)
+
+### Troubleshooting
+
+- [View Logs](edge-troubleshooting.md#viewing-local-logs)
+- [Reset Edge to Default Firmware](edge-troubleshooting.md#resetting-edge-to-default-firmware-when-locked-out)
