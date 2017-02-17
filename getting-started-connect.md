@@ -50,19 +50,19 @@ The Edge can be configured to send data to another machine on the local WIFI net
 
 Navigate to `Network` -> `Wireless` in the main menu and scan for available networks.
 
-![Wireless](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-ConfigureWireless.png "Wireless")
+![Wireless](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless.png "Wireless")
 
 Join an available network
 
-![Join network](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-ConfigureWireless-2.png "Join network")
+![Join network](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless-2.png "Join network")
 
 Enter network key and submit
 
-![Enter key](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-ConfigureWireless-3.png "Enter key")
+![Enter key](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless-3.png "Enter key")
 
 Save and apply changes
 
-![Save and apply changes](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-ConfigureWireless-4.png "Save and apply")
+![Save and apply changes](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless-4.png "Save and apply")
 
 Once connected to the local WIFI network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WIFI connection while powered.
 
