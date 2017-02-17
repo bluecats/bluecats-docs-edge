@@ -62,7 +62,7 @@ In this sample scenario, the edge relay sends measurement data to AWS IoT mqtt b
 		
 	- Function Node 
 	
-		Function node extracts Tilt, RSSI and BeaconMAC from the payload and send them to the output nodes. Refer Edge Relay [documentation](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---sensor-measurement) for the data structures.
+		Function node extracts Tilt, RSSI and BeaconMAC from the payload and send them to the output nodes. Refer Edge Relay [documentation](getting-started-edge-applications.md#application---sensor-measurement) for the data structures.
 	
 		```
 		var Tilt = {payload:msg.payload.measurement[0].data[0].toFixed(1)};
