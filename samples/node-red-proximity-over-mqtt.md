@@ -43,7 +43,7 @@ In this sample scenario, the edge relay sends proximity data to a mqtt broker (i
      
     - Function Node
     
-      Function node extracts Power, RSSI, Accuracy, BeaconMAC, Major and Minor from the payload and send them to the output nodes. Refer Edge Relay [documentation](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---proximity) for the data structures.
+      Function node extracts Power, RSSI, Accuracy, BeaconMAC, Major and Minor from the payload and send them to the output nodes. Refer Edge Relay [documentation](getting-started-edge-applications.md#application---proximity) for the data structures.
       
       ```
       var mPow = {payload:msg.payload.mPow};
