@@ -1,5 +1,5 @@
 # In this guide
-#### - [Getting started](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md)
+#### - [Getting started](samples/node-red-gettingstarted.md)
 - [About Node-red](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-installation.md#about)
 - [Installation](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-installation.md#installation)
 - [Runnings](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-installation.md#running)
