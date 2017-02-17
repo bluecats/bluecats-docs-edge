@@ -12,10 +12,10 @@ The local device logs can be used to see if beacons are being detected and if th
 3. Hold Reset
 4. Plug in power while holding reset. Edge will flash some LEDs, and then start blinking red LED. Let red LED blink 6 times, then let go of reset. You should see the red LED blink fast for 1 sec.
 5. Disable your wifi, and set your own ip to 192.168.1.2 for your ethernet interface
-<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/network-settings.jpg" alt="Network Settings"/></p>
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/network-settings.jpg" alt="Network Settings"/></p>
 
 6. Go to 192.168.1.1 in your web browser
 7. Get our firmware, upload and apply it
-<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/upload-firmware-pic.jpg" alt="Upload Firmware"/></p>
+<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/upload-firmware-pic.jpg" alt="Upload Firmware"/></p>
 
 8. Wait a minute. Set your ip to something like 192.168.8.118 (just not 192.168.8.1) for the ethernet interface and go to 192.168.8.1 in your browser You should see the Bluecats OpenWrt web interface
