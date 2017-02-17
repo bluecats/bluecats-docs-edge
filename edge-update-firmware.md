@@ -6,15 +6,15 @@ There are two ways to update the edge firmware, manually uploading a file or via
 
 Download the sysupgrade-compatible image file to your local machine. 
 
-<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Backup-flash-menu.png" alt="update-firmware-menu"/></p>
+<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Backup-flash-menu.png" alt="update-firmware-menu"/></p>
 
 Navigate to System -> Backup / Flash Firmware and then choose image file by clicking the choose file button in the 'Flash new firmware image' section. Uncheck the 'Keep settings' checkbox when flashing a major firmware revision. You can keep it checked for minor firmware updates. Click 'Flash Image' button to proceed.
 
-<p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Flash-file-select.png" alt="upload-file"/></p>
+<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Flash-file-select.png" alt="upload-file"/></p>
 
 Compare the checksum and the file size with the original file to ensure data integrity. Click 'Proceed' to start the flash process. 
 
-<p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Flash-firmware-proceed.png" alt="proceed"/></p>
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Flash-firmware-proceed.png" alt="proceed"/></p>
 
 Wait a few minutes before you try to reconnect. Depending on your settings, it might be necessary to renew the address of your computer to reach the device again. 
 
@@ -27,7 +27,7 @@ Contact support@bluecats.com for download urls for latest packages.
 
 Note that this method only supports download via HTTP.
 
-<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/edge-update-package.png" alt="Upload Package"/></p>
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/edge-update-package.png" alt="Upload Package"/></p>
 
 
 #### Using SSH
