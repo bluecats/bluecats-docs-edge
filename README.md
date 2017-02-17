@@ -8,15 +8,15 @@
 
 ### Configuring Applications
 
-- [BlueCats Edge Applications](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#bluecats-edge-applications---overview)
-- [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#live-view)
-- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-endpoints)
-- [Configure Applications](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#configure-applications)
-    - [Scan and Forward](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---scan-and-forward)
-    - [Proximity](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---proximity)
-    - [Sensor Measurement](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---sensor-measurement)
-    - [BlueCats Beacon Health](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#application---bluecats-beacon-health)
-- [Example UDP Server](https://github.com/bluecats/bluecats-docs-edge/blob/master/getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
+- [BlueCats Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview)
+- [Live View](getting-started-edge-applications.md#live-view)
+- [Configure Endpoints](getting-started-edge-applications.md#configure-endpoints)
+- [Configure Applications](getting-started-edge-applications.md#configure-applications)
+    - [Scan and Forward](getting-started-edge-applications.md#application---scan-and-forward)
+    - [Proximity](getting-started-edge-applications.md#application---proximity)
+    - [Sensor Measurement](getting-started-edge-applications.md#application---sensor-measurement)
+    - [BlueCats Beacon Health](getting-started-edge-applications.md#application---bluecats-beacon-health)
+- [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 
 ### Updating Firmware and Packages
 - [Flashing  New Firmaware] (edge-update-firmware.md#flashing-new-firmware)
