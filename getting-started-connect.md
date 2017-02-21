@@ -3,6 +3,7 @@
 - [Connecting](getting-started-connect.md#connecting-to-the-edge)
 - [Logging In](getting-started-connect.md#logging-in)
 - [Connecting to WIFI](getting-started-connect.md#connecting-to-internet-via-wifi)
+- [Registering the device](getting-started-connect.md#register-with-bluecats-cloud)
 
 ## In the Box
 
@@ -28,7 +29,7 @@ You will be prompted to log in with the root user credentials.
 
 Username: `root`
 
-Password is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
+RPassword is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/Login.png "Log in")
 
@@ -74,20 +75,16 @@ Navigate to Bluecats -> Connect and Manage. If the 'Device Register Status' is '
 
 If the status is 'Invalid', then follow the steps below.
 
-1. Log into [https://app.bluecats.com/devices](https://app.bluecats.com/devices)
+  - Log into [https://app.bluecats.com/devices](https://app.bluecats.com/devices)
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
+  
+  - Find the Edge you are updating under Devices (you can search by the serial number printed on the label of each Edge) and view its details.
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices.png" alt="bluecats-devices"/></p>
 
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
+  - Click the 'Revoke Access Token' button.
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-revoke.png" alt="bluecats-revoke"/></p>
 
-2. Find the Edge you are updating under Devices (you can search by the serial number printed on the label of each Edge) and view its details.
-
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices.png" alt="bluecats-devices"/></p>
-
-3. Click the 'Revoke Access Token' button. 
-
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-revoke.png" alt="bluecats-revoke"/></p>
-
-4. Go back to the Edge UI and click the 'Register' button.
-
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-register.png" alt="edge-register"/></p>
+  - Go back to the Edge UI and click the 'Register' button.
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-register.png" alt="edge-register"/></p>
 
 Now that your Edge is connected to your local machine or network, start configuring Edge Applications.
