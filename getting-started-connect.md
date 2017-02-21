@@ -67,3 +67,9 @@ Save and apply changes
 Once connected to the local WIFI network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WIFI connection while powered.
 
 Now that your Edge is connected to your local machine or network, start configuring Edge Applications.
+
+
+## Register with Bluecats Cloud
+
+By registering the edge device with Bluecats cloud, you can monitor uptime and request the latest avialable firmware. 
+
