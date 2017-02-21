@@ -72,11 +72,13 @@ Once connected to the local WIFI network, the Edge can be [configured to send to
 By registering the edge device with Bluecats cloud, you can monitor uptime and request the latest avialable firmware. 
 
 Navigate to Bluecats -> Connect and Manage. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. 
+  <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu-2.png" alt="edge-register-?"/></p>
+
 
 If the status is 'Invalid', then follow the steps below.
 
   - Log into [https://app.bluecats.com/devices](https://app.bluecats.com/devices)
-  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
+  <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
   
   - Find the Edge you are updating under Devices (you can search by the serial number printed on the label of each Edge) and view its details.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices.png" alt="bluecats-devices"/></p>
@@ -87,4 +89,4 @@ If the status is 'Invalid', then follow the steps below.
   - Go back to the Edge UI and click the 'Register' button.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-register.png" alt="edge-register"/></p>
 
-Now that your Edge is connected to your local machine or network, start configuring Edge Applications.
+Now that your Edge is connected to your local machine or network, start configuring [Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview).
