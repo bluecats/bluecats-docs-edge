@@ -27,3 +27,5 @@
 
 - [View Logs](edge-troubleshooting.md#viewing-local-logs)
 - [Reset Edge to Default Firmware](edge-troubleshooting.md#resetting-edge-to-default-firmware-when-locked-out)
+
+### [Sample Applications using node-red](samples/README.md#edge-sample-applications-using-node-red)
