@@ -8,7 +8,7 @@ Download the sysupgrade-compatible image file to your local machine.
 
 <p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Backup-flash-menu.png" alt="update-firmware-menu"/></p>
 
-Navigate to System -> Backup / Flash Firmware and then choose image file by clicking the choose file button in the 'Flash new firmware image' section. Uncheck the 'Keep settings' checkbox when flashing a major firmware revision. You can keep it checked for minor firmware updates. Click 'Flash Image' button to proceed.
+Navigate to `System` -> `Backup / Flash Firmware` and then choose image file by clicking the choose file button in the 'Flash new firmware image' section. Uncheck the 'Keep settings' checkbox when flashing a major firmware revision. You can keep it checked for minor firmware updates. Click 'Flash Image' button to proceed.
 
 <p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Flash-file-select.png" alt="upload-file"/></p>
 
@@ -24,7 +24,7 @@ This requires the edge to be internet connected which you can do by configuring 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/connect-manage-menu.png" alt="Register and Manage"/></p>
 
 
-Then you can navigate to Bluecats -> Connect and Manage and click the 'Register' button in the 'Register with Bluecats Cloud' section if the device is not registerd before. 
+Then navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. If the status is 'Invalid' or you need to re-register the device, refer [registering the device](getting-started-connect.md#register-with-bluecats-cloud). 
 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/connect-manage-update.png" alt="Update Firmware"/></p>
 
@@ -32,7 +32,7 @@ Once registerd in bluecats cloud, click 'Update' button in the 'Update to Latest
 
 ## Updating BlueCats Edge Packages
 ### Using web interface
-There are two ways to update the BlueCats Edge packages to receive updates or after a firmware update. First is via the web GUI. This requires the Edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. Then you can navigate to System -> Software and then under the Actions tab there is an input box with 'Download and install package'. You can then paste each of the following links one at a time and hit 'OK'. This will download and install each of the packages.
+There are two ways to update the BlueCats Edge packages to receive updates or after a firmware update. First is via the web GUI. This requires the Edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. Then you can navigate to `System` -> `Software` and then under the Actions tab there is an input box with 'Download and install package'. You can then paste each of the following links one at a time and hit 'OK'. This will download and install each of the packages.
 
 Contact support@bluecats.com for download urls for latest packages.
 
