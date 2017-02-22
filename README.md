@@ -5,6 +5,7 @@
 - [Connecting](getting-started-connect.md#connecting-to-the-edge)
 - [Logging In](getting-started-connect.md#logging-in)
 - [Connecting to WIFI](getting-started-connect.md#connecting-to-internet-via-wifi)
+- [Registering the device](getting-started-connect.md#register-with-bluecats-cloud)
 
 ### Configuring Applications
 
