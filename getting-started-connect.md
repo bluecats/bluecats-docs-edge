@@ -71,17 +71,16 @@ Once connected to the local WIFI network, the Edge can be [configured to send to
 
 By registering the edge device with Bluecats cloud, you can monitor uptime and request the latest avialable firmware. 
 
-Navigate to Bluecats -> Connect and Manage. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. 
+Navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. 
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu-2.png" alt="edge-register-?"/></p>
 
-
-If the status is 'Invalid', then follow the steps below.
+If the status is 'Invalid', then follow the steps below to register the device.
 
   - Log into [https://app.bluecats.com/devices](https://app.bluecats.com/devices)
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
   
   - Find the Edge you are updating under Devices (you can search by the serial number printed on the label of each Edge) and view its details.
-  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices.png" alt="bluecats-devices"/></p>
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices1.png" alt="bluecats-devices"/></p>
 
   - Click the 'Revoke Access Token' button.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-revoke.png" alt="bluecats-revoke"/></p>
