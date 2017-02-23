@@ -76,6 +76,7 @@ Navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' 
 
 If the status is 'Invalid', then follow the steps below to register the device.
 
+  - If you have your Edge, but don't yet have a BlueCats account follow these steps to create an account and [claim your devices](http://support.bluecats.com/customer/portal/articles/2345533-what-is-a-claim-code-)
   - Log into [https://app.bluecats.com/devices](https://app.bluecats.com/devices)
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
   
