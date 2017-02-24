@@ -56,6 +56,12 @@ The BlueCats Edge provides four default applications plus some global BLE device
 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Menu.png" alt="Applications"/></p>
 
+### Overview
+
+This sectionshows an overview of which message types are enabled, their end points and formats. And also it shows the status of global filters.  
+
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/edge-application-overview.png" alt="Applications"/></p>
+
 ### Application - Scan and Forward
 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-ScanAndForward.png" alt="Scan and Forward"/></p>
