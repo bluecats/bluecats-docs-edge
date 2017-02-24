@@ -72,7 +72,7 @@ Once connected to the local WIFI network, the Edge can be [configured to send to
 By registering the edge device with Bluecats cloud, you can monitor uptime and request the latest avialable firmware. 
 
 Navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. 
-  <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu-2.png" alt="edge-register-?"/></p>
+  <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu2.png" alt="edge-register-?"/></p>
 
 If the status is 'Invalid', then follow the steps below to register the device.
 
@@ -86,7 +86,9 @@ If the status is 'Invalid', then follow the steps below to register the device.
   - Click the 'Revoke Access Token' button.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-revoke.png" alt="bluecats-revoke"/></p>
 
-  - Go back to the Edge UI and click the 'Register' button.
-  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-register.png" alt="edge-register"/></p>
+  - Go back to the Edge UI and click the 'Re-Register' button.
+  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-re-register.png" alt="edge-register"/></p>
+  
+  - You can test the connectivity to Bluecats Cloud by clicking the 'Test Connection' button. The status will be 'Unknown' when there is no connection and 'Unauthorized' when not registerd. 
 
 Now that your Edge is connected to your local machine or network, start configuring [Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview).
