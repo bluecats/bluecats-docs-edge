@@ -20,7 +20,7 @@
 - [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 
 ### Updating Firmware and Packages
-- [Flashing  New Firmware] (edge-update-firmware.md#flashing-new-firmware)
+- [Flashing  New Firmware](edge-update-firmware.md#flashing-new-firmware)
 - [Update BlueCats Packages](edge-update-firmware.md#updating-bluecats-edge-packages)
 
 ### Troubleshooting
