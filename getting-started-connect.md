@@ -29,7 +29,6 @@ We currently support the data formats:
 * binary-format
 
 We support the protocols: 
-* HTTP
 * MQTT
 * UDP  
 
@@ -41,7 +40,7 @@ You will be prompted to log in with the root user credentials.
 
 Username: `root`
 
-RPassword is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
+Password is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/Login.png "Log in")
 
@@ -57,11 +56,11 @@ There are a considerable number of configuration menu items but only a couple wi
 
 #### [Start Configuring Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview) 
 or
-#### Continue with WIFI Setup
+#### Continue with WiFi Setup
 
-## Connecting to Internet via WIFI
+## Connecting to Internet via WiFi
 
-The Edge can be configured to send data to another machine on the local WIFI network, or connected to the internet to enable communication to the BlueCats Cloud or to download updated software.
+The Edge can be configured to send data to another machine on the local WiFi network, or connected to the internet to enable communication to the BlueCats Cloud or to download updated software.
 
 Navigate to `Network` -> `Wireless` in the main menu and scan for available networks.
 
@@ -79,13 +78,13 @@ Save and apply changes
 
 ![Save and apply changes](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless-4.png "Save and apply")
 
-Once connected to the local WIFI network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WIFI connection while powered.
+Once connected to the local WiFi network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WiFi connection while powered.
 
 ## Register with BlueCats Cloud
 
 By registering the edge device with BlueCats cloud, you can monitor uptime and request the latest available firmware. 
 
-Navigate to `BlueCats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the BlueCats cloud services. 
+Navigate to `BlueCats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully connected with the BlueCats cloud services. 
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu2.png" alt="edge-register-?"/></p>
 
 If the status is 'Invalid', then follow the steps below to register the device.
