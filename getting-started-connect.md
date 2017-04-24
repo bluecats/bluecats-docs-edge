@@ -19,11 +19,23 @@ Start by plugging the supplied micro-usb cable into the edge and any USB port to
 
 ![Connect to Edge using Ethernet](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/010-Connect.png "Connect with Ethernet")
 
-Note the assigned IP address for later (in this case `192.168.8.147`) as this will be used as the test endpoint to receive scan data over UDP.
+Note the assigned IP address for later (in this case `192.168.8.147`) as this will be used as the test endpoints to receive scan data over UDP. 
+
+## Sending your Data (Protocols and Formats)
+For sending data to your endpoints. 
+We currently support the data formats: 
+* JSON 
+* CSV 
+* binary-format
+
+We support the protocols: 
+* HTTP
+* MQTT
+* UDP  
 
 ## Logging In
 
-Each edge runs a local web configuration tool to manage both network configuration and BlueCats BLE scanning settings. After your computer has connected to the Edge over Ethernet, navigate to the Edge's IP address `192.168.8.1` using your web browser.
+Each edge runs a local web configuration tool to manage both network configuration and BlueCats BLE scanning settings. After your computer has connected to the Edge over Ethernet, navigate to the Edge's IP address [192.168.8.1](http://192.168.8.1) using your web browser.
 
 You will be prompted to log in with the root user credentials.
 
@@ -43,9 +55,11 @@ There are a considerable number of configuration menu items but only a couple wi
 
 ![BlueCats Live View](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png "System Overview")
 
-Optionally continue with WIFI setup or Start configuring Edge Applications
+#### [Start Configuring Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview) 
+or
+#### Continue with WIFI Setup
 
-## Connecting to internet via WIFI
+## Connecting to Internet via WIFI
 
 The Edge can be configured to send data to another machine on the local WIFI network, or connected to the internet to enable communication to the BlueCats Cloud or to download updated software.
 
@@ -67,11 +81,11 @@ Save and apply changes
 
 Once connected to the local WIFI network, the Edge can be [configured to send to an IP address](#configuring-ble-scanner) on that network and the ethernet cable can then be disconnected as the Edge will continue sending data over the local WIFI connection while powered.
 
-## Register with Bluecats Cloud
+## Register with BlueCats Cloud
 
-By registering the edge device with Bluecats cloud, you can monitor uptime and request the latest avialable firmware. 
+By registering the edge device with BlueCats cloud, you can monitor uptime and request the latest available firmware. 
 
-Navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. 
+Navigate to `BlueCats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the BlueCats cloud services. 
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu2.png" alt="edge-register-?"/></p>
 
 If the status is 'Invalid', then follow the steps below to register the device.
@@ -89,6 +103,9 @@ If the status is 'Invalid', then follow the steps below to register the device.
   - Go back to the Edge UI and click the 'Re-Register' button.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/edge-re-register.png" alt="edge-register"/></p>
   
-  - You can test the connectivity to Bluecats Cloud by clicking the 'Test Connection' button. The status will be 'Unknown' when there is no connection and 'Unauthorized' when not registerd. 
+  - You can test the connectivity to BlueCats Cloud by clicking the 'Test Connection' button. The status will be 'Unknown' when there is no connection and 'Unauthorized' when not registerd. 
 
 Now that your Edge is connected to your local machine or network, start configuring [Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview).
+
+
+
