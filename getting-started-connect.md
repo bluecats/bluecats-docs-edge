@@ -40,7 +40,7 @@ You will be prompted to log in with the root user credentials.
 
 Username: `root`
 
-Password is blank (unset) by default. After logging in without supplying a password the Web UI will prompt to configure one.
+Password is blank (unset) by default. After logging in without supplying a password, the Web UI will prompt to configure one.
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/Login.png "Log in")
 
@@ -54,9 +54,7 @@ There are a considerable number of configuration menu items but only a couple wi
 
 ![BlueCats Live View](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png "System Overview")
 
-#### [Start Configuring Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview) 
-or
-#### Continue with WiFi Setup
+[Start Configuring Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview) or continue below by connecting your Edge using the WiFi Setup.
 
 ## Connecting to Internet via WiFi
 
