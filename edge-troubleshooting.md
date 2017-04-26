@@ -16,6 +16,12 @@ The local device logs can be used to see if beacons are being detected and if th
 
 6. Go to 192.168.1.1 in your web browser
 7. Get our firmware, upload and apply it
+> ## Downloading the New Firmware
+> 1Go to our BlueCats App and login with your BlueCats account https://app.bluecats.com/login
+> 2. On the left hand side, click on the "Devices" tab
+> 3. Find your Edge and click on the "Settings" or the gear icon in the upper right corner
+> 4. Click and download the latest Edge and BLE firmwares 
+
 <p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-troubleshooting/upload-firmware-pic.jpg" alt="Upload Firmware"/></p>
 
 8. Wait a minute. Set your ip to something like 192.168.8.118 (just not 192.168.8.1) for the ethernet interface and go to 192.168.8.1 in your browser You should see the Bluecats OpenWrt web interface
