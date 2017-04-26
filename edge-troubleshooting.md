@@ -21,6 +21,8 @@ The local device logs can be used to see if beacons are being detected and if th
 >* On the left hand side, click on the "Devices" tab
 >* Find your Edge and click on the "Settings" or the gear icon in the upper right corner
 >* Click and download the latest Edge and BLE firmwares 
+<p align="center"><img width="700px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeFirmwareDownload.png" alt="Download Firmware"/></p>
+
 
 8. Upload and apply the firmware
 
