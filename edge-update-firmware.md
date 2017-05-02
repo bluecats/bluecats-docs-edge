@@ -3,10 +3,10 @@
 There are two ways to update the edge firmware, manually uploading a file or via the web UI.
 
 ## Downloading the New Firmware
-1. Go to our BlueCats App and login with your BlueCats account https://app.bluecats.com/login
-2. On the left hand side, click on the "Devices" tab
+1. Go to our BlueCats App and log in with your BlueCats account https://app.bluecats.com/login
+2. On the left-hand side, click on the "Devices" tab
 3. Find your Edge and click on the "Settings" or the gear icon in the upper right corner
-4. Click and download the latest Edge and BLE firmwares 
+4. Click and download the latest Edge and BLE firmware
 
 <p align="center"><img width="700px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeFirmwareDownload.png" alt="Download Firmware"/></p>
 
