@@ -29,11 +29,11 @@ Wait a few minutes before you try to reconnect. Depending on your settings, it m
 ### Using Web Interface
 This requires the edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. 
 
-Then navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully conneected with the Bluecats cloud services. If the status is 'Invalid' or you need to re-register the device, refer [registering the device](getting-started-connect.md#register-with-bluecats-cloud). 
+Then navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully connected with the Bluecats cloud services. If the status is 'Invalid' or you need to re-register the device, refer [registering the device](getting-started-connect.md#register-with-bluecats-cloud). 
 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/edge-firmware-update.png" alt="Update Firmware"/></p>
 
-Once registerd in bluecats cloud, click 'Update' button in the 'Update to Latest Edge Firmware' section to update the edge to the latest firmware. Wait a few minutes before you try to reconnect. This update will not overwite your settings.
+Once registered in bluecats cloud, click 'Update' button on the 'Update to Latest Edge Firmware' section to update the edge to the latest firmware. Wait a few minutes before you try to reconnect. This update will not overwite your settings.
 
 ## Updating BlueCats Edge Packages
 ### Using Web Interface
