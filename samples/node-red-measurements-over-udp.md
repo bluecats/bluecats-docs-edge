@@ -11,7 +11,7 @@ In this sample scenario, the edge relay sends measurement data over UDP to a nod
  
  <p align="center"><img width="400px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-samples/edge-udp-sensor-measurement.png" alt="Endpoint UDP"/></p>
 
-##Node-red Configuration
+## Node-red Configuration
 
  - Install additional nodes
 	 - Install [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard) if it is not installed before.
