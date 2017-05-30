@@ -28,7 +28,7 @@
 - [View Logs](edge-troubleshooting.md#viewing-local-logs)
 - [Reset Edge to Default Firmware](edge-troubleshooting.md#resetting-edge-to-default-firmware-when-locked-out)
 
-# Sample Integrations and Applications using Node-Red or AWS IoT
+# Sample Integrations using Node-Red or AWS IoT
 
 #### - Getting started with Node-red
 - [About Node-red](samples/node-red-gettingstarted.md#about)
