@@ -1,4 +1,4 @@
-# Edge sample applications using Node-red
+# Edge sample applications
 #### - Getting started
 - [About Node-red](node-red-gettingstarted.md#about)
 - [Installation](node-red-gettingstarted.md#installation)
