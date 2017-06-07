@@ -25,7 +25,7 @@ Note the assigned IP address for later (in this case `192.168.8.147`) as this wi
 Start by plugging the supplied micro-usb cable into the edge and any USB port to power up the device and attach the external bluetooth antenna. Note that it may take 20-30 seconds to complete startup. 
 
 1. Look at the bottom of your Edge. There should be an SSID (i.e. bluecats-230).
-3. Then look in your WiFi connections and find that Wifi Name. 
+3. Then look in your WiFi connections and find that WiFi Name. 
 4. Connect to it. 
 5. Then go to this address [192.168.8.1](http://192.168.8.1).
 
