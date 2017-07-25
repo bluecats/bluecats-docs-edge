@@ -16,7 +16,7 @@ There are two ways to update the edge bluetooth firmware, manually uploading a f
 
 Navigate to `Bluecats` -> `Conenct and Manage` and then select `Local` tab.
 
-<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-get-ble-module-info.png" alt="get-ble-module-info"/></p>
+<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-get-ble-module-info.png" alt="get-ble-module-info"/></p>
 
 CLick `Get Info` button to request all the available configuration and version information from the BLE module.
 
@@ -26,7 +26,7 @@ To update the BLE firmaware to the latest version, select the dowloaded image fi
 
 To apply the new version, click `Update` button in the `Apply Uploaded BLE Module Firmware` section. 
 
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-apply-ble-firmware.png" alt="apply-ble-firmware"/></p>
+<p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-apply-ble-firmware.png" alt="apply-ble-firmware"/></p>
 
 ### Using Web Interface
 This requires the edge to be internet connected which you can do by configuring the WIFI as described in the getting started doc. 
