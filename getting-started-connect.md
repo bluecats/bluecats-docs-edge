@@ -111,7 +111,7 @@ If the status is 'Invalid', then follow the steps below to register the device.
   
   - You can test the connectivity to BlueCats Cloud by clicking the 'Test Connection' button. The status will be 'Unknown' when there is no connection and 'Unauthorized' when not registerd. 
 
-Now that your Edge is connected to your local machine or network, start configuring [Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview).
+Now that your Edge is connected to your local machine or network, you can [update edge firmware](edge-update-firmware.md), [update BLE module firmware](edge-update-bluetooth-firmware.md) and start configuring [Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview).
 
 
 
