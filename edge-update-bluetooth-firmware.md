@@ -11,7 +11,10 @@ Then navigate to `Bluecats` -> `Connect and Manage`. If the 'Device Register Sta
 
 Once registered in bluecats cloud, click `Update` button on the `Update to Latest BLE Module Firmware` section to update the edge BLE module to the latest firmware. 
 
-## Downloading the New Firmware
+
+### Manually Uploading a File
+
+#### Downloading the New Firmware
 1. Go to our BlueCats App and log in with your BlueCats account https://app.bluecats.com/login
 2. On the left-hand side, click on the "Devices" tab
 3. Find your Edge and click on the "Settings" or the gear icon in the upper right corner
@@ -19,7 +22,7 @@ Once registered in bluecats cloud, click `Update` button on the `Update to Lates
 
 <p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/EdgeBLEFirmwareDownload.png" alt="Download BLE Firmware"/></p>
 
-### Manually Uploading a File
+#### Upload and update
 
 Navigate to `Bluecats` -> `Conenct and Manage` and then select `Local` tab.
 
