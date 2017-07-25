@@ -21,6 +21,7 @@
 
 ### Updating Firmware and Packages
 - [Flashing  New Firmware](edge-update-firmware.md#flashing-new-firmware)
+- [Update Bluetooth Firmware](edge-update-bluetooth-firmware.md)
 - [Update BlueCats Packages](edge-update-firmware.md#updating-bluecats-edge-packages)
 
 ### Troubleshooting
