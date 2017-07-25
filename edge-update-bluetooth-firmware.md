@@ -26,7 +26,7 @@ Once registered in bluecats cloud, click `Update` button on the `Update to Lates
 
 Navigate to `Bluecats` -> `Conenct and Manage` and then select `Local` tab.
 
-<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-connect-and-manage.png" alt="edge-connect-and-manage-menu"/></p>
+<p align="center"><img width="700px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-firmware-update/Edge-connect-and-manage-menu.png" alt="edge-connect-and-manage-menu"/></p>
 
 CLick `Get Info` button to request all the available configuration and version information from the BLE module.
 
