@@ -9,6 +9,6 @@ Check your Edge Relay to determine which documentation you should follow:
 
 To check what firmware you are using: 
 
-* ![Edge Relay Getting Started Guide](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-connect.md#in-the-box "Getting Started") 
+* ![Setting Up Edge Relay](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-connect.md#in-the-box "Getting Started") 
 
 * ![How to Check the Firmware version](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-connect.md#edge-web-interface--checking-your-firmware-version "Firmware Version")
