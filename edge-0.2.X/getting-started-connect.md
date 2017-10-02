@@ -39,7 +39,8 @@ We currently support the data formats:
 
 We support the protocols: 
 * MQTT
-* UDP  
+* UDP
+* HTTP
 
 ## Logging In
 
@@ -53,17 +54,19 @@ Password is blank (unset) by default. After logging in without supplying a passw
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/Login.png "Log in")
 
-## Edge Web Interface
+## Edge Web Interface / Checking your Firmware Version
 
-Once logged in to the web configuration tool you will land on the System Overview screen. 
+Once logged in to the web configuration tool you will land on the System Overview screen. Here you can see what Edge firmware version. You are on and this allows you to check which documenation to follow. If you need to change to documentation, here is the landing page for all of the [Edge documentation](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeMainView.png). 
 
 ![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/SystemStatus.png "System Overview")
+
+Edge Main View 
 
 There are a considerable number of configuration menu items but only a couple will require any changes. Some of the additional useful features are listed at the end of this document under [Troubleshooting](#troubleshooting). All of the options to configure bluetooth scanning can be found under the 'BlueCats' main menu item.
 
 ![BlueCats Live View](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png "System Overview")
 
-[Start Configuring Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview) or continue below by connecting your Edge using the WiFi Setup.
+[Start Configuring Edge Applications](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeUIBlueCatsMenu.png) or continue below by connecting your Edge using the WiFi Setup.
 
 ## Connecting to Internet via WiFi
 
@@ -79,7 +82,7 @@ Join an available network
 
 Enter network key and submit
 
-![Enter key](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/070-Configure-Wireless-3.png "Enter key")
+![Enter key](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConnectingWiFi.png "Enter key")
 
 Save and apply changes
 
@@ -92,7 +95,7 @@ Once connected to the local WiFi network, the Edge can be [configured to send to
 By registering the edge device with BlueCats cloud, you can monitor uptime and request the latest available firmware. 
 
 Navigate to `BlueCats` -> `Connect and Manage`. If the 'Device Register Status' is 'Registered' then the edge device is successfully connected with the BlueCats cloud services. 
-  <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/connect-manage-menu2.png" alt="edge-register-?"/></p>
+  <p align="center"><img width="500px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeRegisterBlueCatsCloud.png"/></p>
 
 If the status is 'Invalid', then follow the steps below to register the device.
 
@@ -101,7 +104,7 @@ If the status is 'Invalid', then follow the steps below to register the device.
   <p align="center"><img width="500px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-login.png" alt="bluecats-login"/></p>
   
   - Find the Edge you are updating under Devices (you can search by the serial number printed on the label of each Edge) and view its details.
-  <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-devices1.png" alt="bluecats-devices"/></p>
+  <p align="center"><img width="600px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/BlueCatsAppDevices.png"/></p>
 
   - Click the 'Revoke Access Token' button.
   <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/bluecats-revoke.png" alt="bluecats-revoke"/></p>
