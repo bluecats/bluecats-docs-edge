@@ -62,7 +62,7 @@ Once logged in to the web configuration tool you will land on the System Overvie
 
 There are a considerable number of configuration menu items but only a couple will require any changes. Some of the additional useful features are listed at the end of this document under [Troubleshooting](#troubleshooting). All of the options to configure bluetooth scanning can be found under the 'BlueCats' main menu item.
 
-![BlueCats Live View](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png "System Overview")
+![BlueCats Live View](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeRegisterBlueCatsCloud.png "System Overview")
 
 [Start Configuring Edge Applications](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeUIBlueCatsMenu.png) or continue below by connecting your Edge using the WiFi Setup.
 
