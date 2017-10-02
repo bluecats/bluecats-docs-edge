@@ -58,9 +58,7 @@ Password is blank (unset) by default. After logging in without supplying a passw
 
 Once logged in to the web configuration tool you will land on the System Overview screen. Here you can see what Edge firmware version. You are on and this allows you to check which documenation to follow. If you need to change to documentation, here is the landing page for all of the [Edge documentation](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeMainView.png). 
 
-![Log in to Edge Web Configuration](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/SystemStatus.png "System Overview")
-
-Edge Main View 
+![Log in to Edge Web Configuration](https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeMainView.png "System Overview")
 
 There are a considerable number of configuration menu items but only a couple will require any changes. Some of the additional useful features are listed at the end of this document under [Troubleshooting](#troubleshooting). All of the options to configure bluetooth scanning can be found under the 'BlueCats' main menu item.
 
