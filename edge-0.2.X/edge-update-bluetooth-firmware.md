@@ -26,8 +26,7 @@ Once registered in bluecats cloud, click `Update` button on the `Update to Lates
 
 Navigate to `Bluecats` -> `Conenct and Manage` and then select `Local` tab.
 
-<p align="center"><img width="700px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/UpgradeBluetoothMenu.png
-"/></p>
+<p align="center"><img width="700px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/UpgradeBluetoothMenu.png"/></p>
 
 CLick `Get Info` button to request all the available configuration and version information from the BLE module.
 
