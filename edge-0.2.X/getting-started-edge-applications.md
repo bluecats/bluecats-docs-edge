@@ -21,7 +21,7 @@ BlueCats Edge provides default applications for common BLE scanning use cases. T
 	- Scan for BlueCats sensor measurement data
 	- Scan for BlueCats beacon health data including battery level and configuration status
 
-For each application the endpoint type (UDP or MQTT), message format (CSV or JSON) and message throttle limits for can be independently configured or the application can be disabled if not required.
+For each application the endpoint type (UDP, MQTT, or HTTP), message format (CSV, JSON, or Binary) and message throttle limits for can be independently configured or the application can be disabled if not required.
 
 ## Edge Configuration
 
