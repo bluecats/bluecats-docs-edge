@@ -1,6 +1,6 @@
 # BlueCats Edge Endpoints - Overview
 
-- [BlueCats Edge Applications](#bluecats-edge-applications---overview)
+- [BlueCats Edge Endpoints](#bluecats-edge-endpoints---overview)
 - [Live View](#live-view)
 - [Configure Endpoints](#configure-endpoints)
 - [Configure Applications](#configure-applications)
@@ -14,30 +14,25 @@ BlueCats Edge provides default applications for common BLE scanning use cases. T
 
 - Configure network settings for connectivity to local network and the internet. The BlueCats Edge is a Wireless Access Point providing advanced network configuration options if required.
 - View beacons in range of the Edge with Live View
-- Configure global BLE scan filters. This provides a configurable minimum signal strength threshold for beacon detection or to match a specific Bluetooth address or BLE advertisement format - useful for reducing noise during testing
-- Configure default applications. Detect and forward BLE advertisements for these common use cases:
-	- Raw BLE advertisement payload scan and forward
-	- Scan for beacon proximity for asset or personnel tracking
-	- Scan for BlueCats sensor measurement data
-	- Scan for BlueCats beacon health data including battery level and configuration status
+- Configure filters for your endpoints. This provides a way to filter meaningful data to your endpoints. 
 
 For each application the endpoint type (UDP, MQTT, or HTTP), message format (CSV, JSON, or Binary) and message throttle limits for can be independently configured or the application can be disabled if not required.
 
 ## Edge Configuration
 
-Once you have [connected to the Edge and configured network settings](getting-started-connect.md) you can manage bluetooth scanning applications on the Edge.
+Once you have [connected to the Edge and configured network settings](getting-started-connect.md) you can manage sending data to your specefied endpoints on the Edge.
 
 ### Live View
 
 Live view provides a simple list of BLE devices detected in range of the Edge along with their current RSSI (signal strength).
 
-<p style="text-align:center" align="center"><img style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/LiveView.png" alt="Live View"/></p>
+<p style="text-align:center" align="center"><img style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeLiveViewApplication.png" alt="Live View"/></p>
 
-### Configure Endpoints
+## Configure Endpoints
 
-To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support two types of endpoint - UDP or MQTT.
+To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support two types of endpoint - UDP, MQTT, or HTTP.
 
-<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Menu.png" alt="Endpoints"/></p>
+<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConfigureEndpointsApplication.png" alt="Endpoints"/></p>
 
 Configure one or both of the endpoint options. Currently the Edge only supports a single endpoint for each type. Data will only be sent the configured endpoint when an Edge application has been enabled and that endpoint type selected.
 
@@ -50,19 +45,7 @@ A simple MQTT endpoint without TLS enabled just requires the host/IP and port of
 
 <p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Certificates.png" alt="MQTT Certificates"/></p>
 
-## Configure Applications
 
-The BlueCats Edge provides four default applications plus some global BLE device filter rules. One or more of these can be enabled and configured individually.
-
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Menu.png" alt="Applications"/></p>
-
-### Overview
-
-This sectionshows an overview of which message types are enabled, their end points and formats. And also it shows the status of global filters.  
-
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/edge-application-overview.png" alt="Applications"/></p>
-
-### Application - Scan and Forward
 
 <p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-ScanAndForward.png" alt="Scan and Forward"/></p>
 
@@ -108,9 +91,6 @@ Example: JSON (for MQTT,UDP)
     "adData":"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
 }
 ```
-
-### Application - Proximity
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-Proximity.png" alt="Applications - Proximity"/></p>
 
 BLE packet matching packet filters will be forwarded with the following data:
 
@@ -273,7 +253,6 @@ Example: JSON (for MQTT,UDP)
 
 
 ## Using Beacon Detection Data
-
 ### Beacon Identification
 
 A scanned beacon may be identified by either its manufacturer assigned MAC address (private Bluetooth Address) or a custom identifier included in the advertisement payload. This identifier may be encrypted (BlueCats Verified) or a plain-text/static component of the payload.
@@ -284,25 +263,6 @@ A scanned beacon may be identified by either its manufacturer assigned MAC addre
 
 MAC or Custom Identifier included in the payload may be either encrypted or plain/static
 
-### Proximity / Location Data
-
-- RSSI (Received Signal Strength Indicator)
-- RSSI Smooth. This filters multiple signal strength readings to produce a signal strength reading which is more stable.
-- MeasuredPower / Tx Power
-- Accuracy (calculated from RSSI Smooth and MPower). This is an approximate conversion of signal strength to a distance in metres.
-
-### Sensor Measurement Data
-
-- Temperature
-- Accelerometer (real-time sampling)
-- Accelerometer (motion event)
-- Tilt (Degrees from vertical)
-
-### BC Management
-
-- Remaining battery
-- Settings version
-- Firmware Identifier
 
 # Apply Global BLE Scan Filters
 
@@ -312,7 +272,8 @@ When BLE advertisements are received from each scan they can be filtered using o
 - BT Address Pattern/Mask e.g. 0007/FFFF would match any beacon with a public Bluetooth address starting with 0007
 - Generic BLE Advertisement Pattern/Mask e.g. 000000FF/00000041 for BC Ads
 
-## Example - Receiving data with a simple UDP server
+## Testing Your Endpoints
+### Example - Receiving data with a simple UDP server
 
 Once the Edge has been configured to send messages over UDP to a port and IP, a simple server applicaiton can be set up to listen for the messages.
 
