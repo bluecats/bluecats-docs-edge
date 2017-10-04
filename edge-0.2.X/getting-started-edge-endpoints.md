@@ -1,4 +1,4 @@
-# BlueCats Edge Applications - Overview
+# BlueCats Edge Endpoints - Overview
 
 - [BlueCats Edge Applications](#bluecats-edge-applications---overview)
 - [Live View](#live-view)
