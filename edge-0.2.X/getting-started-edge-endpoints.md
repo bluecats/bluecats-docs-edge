@@ -26,7 +26,7 @@ Once you have [connected to the Edge and configured network settings](getting-st
 
 Live view provides a simple list of BLE devices detected in range of the Edge along with their current RSSI (signal strength).
 
-<p style="text-align:center" align="center"><img style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeLiveViewApplication.png" alt="Live View"/></p>
+<p style="text-align:center" align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeLiveViewApplication.png" alt="Live View"/></p>
 
 ## Configure Endpoints
 
@@ -34,7 +34,7 @@ To make use of the data collected by the Edge, you will need to send it somewher
 
 * Click on *Add New Addpoint* to start configuring endpoints 
 
-<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConfigureEndpointsApplication.png" alt="Endpoints"/></p>
+<p style="text-align:center" align="center"><img align="center" width= "600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConfigureEndpointsApplication.png" alt="Endpoints"/></p>
 
 
 ### UDP
@@ -236,7 +236,7 @@ Example: UDP or MQTT
 Offset  | Length | Type      | Field
 --------|--------|-----------|-------
 0       | 2      | uint16_t  | Packet Type
-2       | 6      | uint8_t[] | Edge MAC
+2       | 6      | uint8_t[] | Edge MAC 
 8       | 6      | uint8_t[] | Device MAC
 14      | 1      | uint8_t   | Device Type
 15      | 1      | int8_t    | RSSI
