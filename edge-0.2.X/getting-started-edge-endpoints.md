@@ -10,7 +10,7 @@
     - [BlueCats Beacon Health](#application---bluecats-beacon-health)
 - [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 
-BlueCats Edge provides the ability to send your data that you want to various endpoint types (UDP, MQTT, or HTTP) and message formats (CSV, JSON, or Binary). With the Edge you can:
+The Edge Relay provides the ability to send your data that you want to various endpoint types (UDP, MQTT, or HTTP) and message formats (CSV, JSON, or Binary). With the Edge you can:
 
 - Configure network settings for connectivity to local network and the internet. The BlueCats Edge is a Wireless Access Point providing advanced network configuration options if required.
 - View beacons in range of the Edge with Live View. 
@@ -44,16 +44,17 @@ To configure UDP:
 2. Click the *Enabled* checkbox to enable your endpoint
 3. Select UDP for your Protocol
 4. Enter the IP and PORT where the data should be sent.
-5. Select the format for which your data will come in. 
+5. Select the format for which your data will come in: JSON, CSV, or Binary
+6. Click *Save and Apply*
 
-<p align="center"><img width="600px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeUDPEndpoint.png" alt="Endpoints"/></p>
+<p align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeUDPEndpoint.png" alt="Endpoints"/></p>
 
 
 ### MQTT
 
 A simple MQTT endpoint without TLS enabled just requires the host/IP and port of the MQTT server and the 'TLS Enabled' set to `0`. Some MQTT endpoints such as AWS IoT require TLS for connections. Here you will need to upload the Certificate, Private Key and Certificate Authority [generated in the AWS console](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
 
-<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Certificates.png" alt="MQTT Certificates"/></p>
+<p style="text-align:center" align="center"><img align="center" width="600" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Certificates.png" alt="MQTT Certificates"/></p>
 
 ### HTTP 
 To configure a HTTP endpoint: 
@@ -63,6 +64,9 @@ To configure a HTTP endpoint:
 3. Select HTTP for your Protocol
 4. Enter the IP and PORT where the data should be sent.
 5. You will only be able to receive JSON data for HTTP
+6. Add any other features you want to implement
+7. Click *Save and Apply*
+
 
 What you can configure is what Ad-type to indentigy the beacon in JSON
 * Secure
@@ -70,11 +74,13 @@ What you can configure is what Ad-type to indentigy the beacon in JSON
 * iBeacon
 * bcId
 
-<p align="center"><img width="600px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeHTTPEndpoint.png" alt="HTTP"/></p>
+<p align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeHTTPEndpoint.png" alt="HTTP"/></p>
 
 ### CSV
 Any BLE packet matching packet filters will be forwarded with the following data:
 
+- Message Type (CSV only) 
+- Message Version  | 1 (CSV only to track format changes)
 - EdgeMAC - Hardware MAC address of the Edge
 - EdgeName - A user defined name for the Edge
 - BeaconMAC - Scanned (public) BT Address of the detected BLE device
@@ -96,7 +102,6 @@ Any BLE packet matching packet filters will be forwarded with the following data
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
 Example: CSV (for UDP, MQTT)
-
 e.g. 
 ```
 BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
@@ -111,6 +116,21 @@ For HTTP, you can also add Additional HTTP Headers.
 
 
 Example: JSON (for MQTT,UDP)
+
+- EdgeMAC - Hardware MAC address of the Edge
+- Device-ID - For internal use, not a constant (ignore)
+- MAC Address - The MAC Adress of the Beacon
+- Measured Power - Measured power at 1 metre
+- RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
+- Ad Mask - The advertisement mask 
+- Channel - The Ad channel the Beacon Ad was received on
+- Timestamp - Nanoseconds since Epoch
+- Battery Power - Measured Battery power 
+- BLE MAC Address - Scanned (public) BT Address of the detected BLE device
+- Version Setting - Version Setting the Beacon is on 
+- Firmware UID - Firmware unique identifier (Beacon Serial Number) 
+- AdData - Full advertisement data payload
 
 | Field            | Example
 | ---              | ---
@@ -165,7 +185,6 @@ Example: JSON for HTTP
 | Timestamp        | 2017-10-03T18:19:13.230952Z
 | Battery Power    | 83
 
-
 ```
 {
     "edgeMAC":"E4956E4CC101",
@@ -188,43 +207,7 @@ Example: JSON for HTTP
             }]
 }
 ```
-BLE packet matching packet filters will be forwarded with the following data:
 
-- Message Type (CSV only) 
-- Message Version  | 1 (CSV only to track format changes)
-- EdgeMAC - Hardware MAC address of the Edge
-- EdgeName - User defined description for the Edge
-- BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
-- RSSI - Received Signal Strength Indicator in dBm
-- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
-- MPow - Measured power at 1 metre
-- Accuracy - Calculated accuracy (estimated distance in metres) based on smooth RSSI and measured power
-- Timestamp - Nanoseconds since Epoch
-
-Example: CSV (for UDP)
-
-```
-BCProximity,1, E4956E40DFCF,Level 6 North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-62,-62,1.00,1480314351666436
-```
-
-Example: JSON (for MQTT,UDP)
-```
-{
-    "edgeMAC":"E4956E40DFCF",
-    "edgeName":"Level 6 North",
-    "beaconMAC":"A0E6F854703A",
-    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
-    "eddyUID": "61687109E602F514C96D000000000001",
-    "privateMAC": "A0E6F854703A",
-    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
-    "rssi":-63,
-    "rssiSmooth":-62,
-    "mPow":-62,
-    "accuracy":1.00
-    "timestamp":1480314351666436
-}
-```
 
 ### Binary 
 Example: UDP or MQTT
@@ -251,47 +234,6 @@ Offset  | Length | Type      | Field
  3, 1, 193, 76, 110, 149, 228, 193, 233, 14, 45, 7, 152, 1, -74, -71, 127, 38, 56, 52, '\x14ah'
  ```
 
-
-
-
-### Application - BlueCats Beacon Health
-
-BLE packet matching packet filters will be forwarded with the following data:
-
-- EdgeMAC - Hardware MAC address of the Edge
-- EdgeName - User defined description for the Edge
-- BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
-- RSSI - Received Signal Strength Indicator in dBm
-- BatteryLevel - Current battery level %
-- FirmwareIdentifier - unique identifier for the firmware currently installed on the beacon
-- SettingsVersion - incrementing version number of beacon configuration changes (0-255)
-- Timestamp - Nanoseconds since Epoch
-
-Example: CSV (for UDP)
-
-```
-BCManagement, E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,87,500000A1,13,1480314351666436
-```
-
-Example: JSON (for MQTT,UDP)
-```
-{
-    "edgeMAC":"E4956E40DFCF",
-    "edgeName":"Level 6 North",
-    "beaconMAC":"A0E6F854703A",
-    "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
-    "eddyUID": "61687109E602F514C96D000000000001",
-    "privateMAC": "A0E6F854703A",
-    "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
-    "rssi":-63,
-    "rssiSmooth":-63,
-    "batteryLevel": 87,
-    "firmwareIdentifier": "500000A1",
-    "settingsVersion":13,
-    "timestamp":1480314351666436
-}
-```
 
 ## BlueCats Edge Supported BLE Ad Types
 
