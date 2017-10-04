@@ -10,17 +10,17 @@
     - [BlueCats Beacon Health](#application---bluecats-beacon-health)
 - [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 
-BlueCats Edge provides default applications for common BLE scanning use cases. This ranges from simple scan and forward of any BLE advertisments in range of the Edge to detection, filtering and parsing of advertisements ready to apply to proximity, sensor measurement or beacon network monitoring solutions. With the Edge you can:
+BlueCats Edge provides the ability to send your data that you want to various endpoint types (UDP, MQTT, or HTTP) and message formats (CSV, JSON, or Binary). With the Edge you can:
 
 - Configure network settings for connectivity to local network and the internet. The BlueCats Edge is a Wireless Access Point providing advanced network configuration options if required.
-- View beacons in range of the Edge with Live View
+- View beacons in range of the Edge with Live View. 
 - Configure filters for your endpoints. This provides a way to filter meaningful data to your endpoints. 
 
-For each application the endpoint type (UDP, MQTT, or HTTP), message format (CSV, JSON, or Binary) and message throttle limits for can be independently configured or the application can be disabled if not required.
+For endpoint type (UDP, MQTT, or HTTP), message format (CSV, JSON, or Binary) and message throttle limits for can be independently configured or the application can be disabled if not required.
 
 ## Edge Configuration
 
-Once you have [connected to the Edge and configured network settings](getting-started-connect.md) you can manage sending data to your specefied endpoints on the Edge.
+Once you have [connected to the Edge and configured network settings](getting-started-connect.md) you can manage sending data to your specified endpoints on the Edge.
 
 ### Live View
 
@@ -30,25 +30,49 @@ Live view provides a simple list of BLE devices detected in range of the Edge al
 
 ## Configure Endpoints
 
-To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support two types of endpoint - UDP, MQTT, or HTTP.
+To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support three types of endpoint - UDP, MQTT, or HTTP. Configure one or all three of the endpoint options. Currently, the Edge supports a as many endpoints for each type. Data will be sent to the configured endpoints when an Edge application has been enabled.
+
+* Click on *Add New Addpoint* to start configuring endpoints 
 
 <p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConfigureEndpointsApplication.png" alt="Endpoints"/></p>
 
-Configure one or both of the endpoint options. Currently the Edge only supports a single endpoint for each type. Data will only be sent the configured endpoint when an Edge application has been enabled and that endpoint type selected.
 
 ### UDP
-To configure UDP simply enter the PORT and IP where the data should be sent.
+To configure UDP:
 
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration.png" alt="Endpoints"/></p>
+1. Name your endpoint 
+2. Click the *Enabled* checkbox to enable your endpoint
+3. Select UDP for your Protocol
+4. Enter the IP and PORT where the data should be sent.
+5. Select the format for which your data will come in. 
+
+<p align="center"><img width="600px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeUDPEndpoint.png" alt="Endpoints"/></p>
+
+
+### MQTT
 
 A simple MQTT endpoint without TLS enabled just requires the host/IP and port of the MQTT server and the 'TLS Enabled' set to `0`. Some MQTT endpoints such as AWS IoT require TLS for connections. Here you will need to upload the Certificate, Private Key and Certificate Authority [generated in the AWS console](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
 
 <p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/EndpointConfiguration-Certificates.png" alt="MQTT Certificates"/></p>
 
+### HTTP 
+To configure a HTTP endpoint: 
 
+1. Name your endpoint 
+2. Click the *Enabled* checkbox to enable your endpoint
+3. Select HTTP for your Protocol
+4. Enter the IP and PORT where the data should be sent.
+5. You will only be able to receive JSON data for HTTP
 
-<p align="center"><img width="600px" src="https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-features/App-ScanAndForward.png" alt="Scan and Forward"/></p>
+What you can configure is what Ad-type to indentigy the beacon in JSON
+* Secure
+* Eddy UID
+* iBeacon
+* bcId
 
+<p align="center"><img width="600px" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeHTTPEndpoint.png" alt="HTTP"/></p>
+
+### CSV
 Any BLE packet matching packet filters will be forwarded with the following data:
 
 - EdgeMAC - Hardware MAC address of the Edge
@@ -71,7 +95,7 @@ Any BLE packet matching packet filters will be forwarded with the following data
 | Timestamp        | 1480314352373689
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
-Example: CSV (for UDP)
+Example: CSV (for UDP, MQTT)
 
 e.g. 
 ```
@@ -79,19 +103,91 @@ BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617F
 ```
 Example: Serialised C Struct (for UDP)
 
+### JSON 
+For all of the protocols with JSON, you can add additional Key, Values.
+For HTTP, you can also add Additional HTTP Headers.
+
+<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/JSONKeyValue.png" alt="JSON Key Value Pairs"/></p>
+
+
 Example: JSON (for MQTT,UDP)
+
+| Field            | Example
+| ---              | ---
+| Edge MAC Address | E4956E40DFCF
+| Device-ID        | 5063816 (ignore) 
+| MAC Address      | 98072D06813B
+| Measured Power   | -67
+| RSSI             | -63
+| RSSI Smooth      | -62
+| Ad mask          | 512
+| Channel          | 37
+| Timestamp        | 2017-10-03T18:19:13.230952Z
+| Battery Power    | 83
+| BLE MAC Address  | 98072D06813B
+| Version Setting  | 2
+| Firmware UID     | 5000006e
+| AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
+
 ```
 {
-    "edgeMAC:"E4956E40DFCF",
-    "edgeName:"Edge-abc",
-    "beaconMAC":"A0E6F854703A",
-    "rssi":-63,
-    "rssiSmooth":-62,
-    "timestamp":1480314351666436
-    "adData":"02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE"
+    "edgeMAC":"E4956E4CC101",
+    "devId":5063816,
+    "mac":"98072D06813B",
+    "mPow":-67,
+    "rssi":-74,
+    "rssiSmooth":-72,
+    "adMsk":512,
+    "channel":37,
+    "adType":512,
+    "ts":"2017-10-03T18:19:13.230952Z",
+    "pBatt":83,
+    "btAddr":"98072D06813B",
+    "vSett":2,
+    "fwUID":"5000006e",
+    "adData":"02010611FF04010098072D06813B5000006E02BD53"
+
 }
 ```
 
+Example: JSON for HTTP 
+
+| Field            | Example
+| ---              | ---
+| Edge MAC Address | E4956E40DFCF
+| Location         | (ignore)
+| ---              | ---
+| **Devices**      | 
+| MAC Address      | 98072D06813B
+| Measured Power   | -67
+| RSSI             | -63
+| RSSI Smooth      | -62
+| Timestamp        | 2017-10-03T18:19:13.230952Z
+| Battery Power    | 83
+
+
+```
+{
+    "edgeMAC":"E4956E4CC101",
+     "loc":{},"devices":[
+            {
+                "mac":"73118A97ACC0",
+                "mPow":-67,
+                "rssi":-77,
+                "rssiSmooth":-77,
+                "ts":"2017-10-04T21:37:43.793701Z",
+                "pBatt":46
+            },
+            {
+                "mac":"5332F1D19772",
+                "mPow":-67,
+                "rssi":-83,
+                "rssiSmooth":-82,
+                "ts":"2017-10-04T21:37:41.099714Z",
+                "pBatt":95
+            }]
+}
+```
 BLE packet matching packet filters will be forwarded with the following data:
 
 - Message Type (CSV only) 
@@ -130,65 +226,33 @@ Example: JSON (for MQTT,UDP)
 }
 ```
 
-### Application - Sensor Measurement
+### Binary 
+Example: UDP or MQTT
 
-BLE packet matching packet filters will be forwarded with the following data:
+>*fields are little-endian
 
-- Message Type (CSV only) 
-- Message Version  | 1 (CSV only to track format changes)
-- EdgeMAC - Hardware MAC address of the Edge
-- EdgeName - User defined description for the Edge
-- BeaconMAC - Scanned (public) BT Address of the detected BLE device, or MAC in payload if available
-- BeaconIdentifier - iBeacon key, Eddystone UID, private MAC address, BlueCats Custom Identifier (JSON format can include multiple identifiers if available)
-- RSSI - Received Signal Strength Indicator in dBm
-- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
-- MeasurementData - sensor measurement received from the beacon
-- Timestamp - Nanoseconds since Epoch
-
-Example: CSV (for UDP)
+#### RSSI Packet: Packet Type 0x0003
+##### Header
+Offset  | Length | Type      | Field
+--------|--------|-----------|-------
+0       | 2      | uint16_t  | Packet Type
+2       | 6      | uint8_t[] | Edge MAC
+8       | 6      | uint8_t[] | Device MAC
+14      | 1      | uint8_t   | Device Type
+15      | 1      | int8_t    | RSSI
+16      | 1      | int8_t    | Measured Power
+17      | 1      | uint8_t   | Sequnce Number
+18      | 1      | uint8_t   | BLE Channel
+19      | 1      | uint8_t   | Battery Level
+20      | 1      | uint8_t   | Payload Length
+21      | 1-255  | uint8_t[] | Payload Data
 
 ```
-BCMeasurement,1,E4956E40DFCF,Level-6-North,A0E6F854703A,61687109905F443691F8E602F514C96D00040F82,-63,-63,0x07,[22.50]:[0.050:0.050:0.050]:[270.00:90.00],1480314351666436
-```
+ 3, 1, 193, 76, 110, 149, 228, 193, 233, 14, 45, 7, 152, 1, -74, -71, 127, 38, 56, 52, '\x14ah'
+ ```
 
-Example: JSON (for MQTT,UDP)
-```
-{
-  "edgeMAC": "E4956E40DFCF",
-  "edgeName": "Level 6 North",
-  "beaconMAC": "A0E6F854703A",
-  "iBeacon": "61687109905F443691F8E602F514C96D00040F82",
-  "eddyUID": "61687109E602F514C96D000000000001",
-  "privateMAC": "A0E6F854703A",
-  "bcIdentifier": "61687109905F443691F8E602F514C96D00040F82",
-  "rssi": -63,
-  "rssiSmooth": -63,
-  "measurements": [
-    {
-      "type": 1,
-      "data": [
-        22.50
-      ]
-    },
-    {
-      "type": 2,
-      "data": [
-        0.050,
-        0.050,
-        0.050
-      ]
-    },
-    {
-      "type": 4,
-      "data": [
-        270.00,
-        90.00
-      ]
-    }
-  ],
-  "timestamp": 1480314351666436
-}
-```
+
+
 
 ### Application - BlueCats Beacon Health
 
@@ -252,19 +316,8 @@ Example: JSON (for MQTT,UDP)
 |          | Data | - | YES  | -         | -         | YES
 
 
-## Using Beacon Detection Data
-### Beacon Identification
 
-A scanned beacon may be identified by either its manufacturer assigned MAC address (private Bluetooth Address) or a custom identifier included in the advertisement payload. This identifier may be encrypted (BlueCats Verified) or a plain-text/static component of the payload.
-
-- MAC - BT Address for any beacon where BT address privacy is disabled
-- MAC - Included in payload in BC Ads including Secure (obfuscated), Newborn, Unconfigured, Management, eManagement (encrypted)
-- Custom Identifer (Included in payload by iBeacon, Eddy-UID, BC-Identifier, BC-eIdentifier)
-
-MAC or Custom Identifier included in the payload may be either encrypted or plain/static
-
-
-# Apply Global BLE Scan Filters
+# Apply Filters
 
 When BLE advertisements are received from each scan they can be filtered using one or more rules.
 
