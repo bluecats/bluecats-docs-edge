@@ -77,7 +77,11 @@ What you can configure is what Ad-type to indentigy the beacon in JSON
 <p align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeHTTPEndpoint.png" alt="HTTP"/></p>
 
 ### CSV
-Any BLE packet matching packet filters will be forwarded with the following data:
+
+Example: CSV (for UDP, MQTT)
+```
+BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
+```
 
 - Message Type (CSV only) 
 - Message Version  | 1 (CSV only to track format changes)
@@ -101,21 +105,35 @@ Any BLE packet matching packet filters will be forwarded with the following data
 | Timestamp        | 1480314352373689
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
-Example: CSV (for UDP, MQTT)
-e.g. 
-```
-BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
-```
-Example: Serialised C Struct (for UDP)
 
 ### JSON 
+Example: JSON (for MQTT,UDP)
+```
+{
+    "edgeMAC":"E4956E4CC101",
+    "devId":5063816,
+    "mac":"98072D06813B",
+    "mPow":-67,
+    "rssi":-74,
+    "rssiSmooth":-72,
+    "adMsk":512,
+    "channel":37,
+    "adType":512,
+    "ts":"2017-10-03T18:19:13.230952Z",
+    "pBatt":83,
+    "btAddr":"98072D06813B",
+    "vSett":2,
+    "fwUID":"5000006e",
+    "adData":"02010611FF04010098072D06813B5000006E02BD53"
+
+}
+```
 For all of the protocols with JSON, you can add additional Key, Values.
 For HTTP, you can also add Additional HTTP Headers.
 
 <p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/JSONKeyValue.png" alt="JSON Key Value Pairs"/></p>
 
 
-Example: JSON (for MQTT,UDP)
 
 - EdgeMAC - Hardware MAC address of the Edge
 - Device-ID - For internal use, not a constant (ignore)
@@ -149,26 +167,7 @@ Example: JSON (for MQTT,UDP)
 | Firmware UID     | 5000006e
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
-```
-{
-    "edgeMAC":"E4956E4CC101",
-    "devId":5063816,
-    "mac":"98072D06813B",
-    "mPow":-67,
-    "rssi":-74,
-    "rssiSmooth":-72,
-    "adMsk":512,
-    "channel":37,
-    "adType":512,
-    "ts":"2017-10-03T18:19:13.230952Z",
-    "pBatt":83,
-    "btAddr":"98072D06813B",
-    "vSett":2,
-    "fwUID":"5000006e",
-    "adData":"02010611FF04010098072D06813B5000006E02BD53"
 
-}
-```
 
 Example: JSON for HTTP 
 
