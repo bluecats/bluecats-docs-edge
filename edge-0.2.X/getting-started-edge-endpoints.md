@@ -68,11 +68,11 @@ To configure a HTTP endpoint:
 7. Click *Save and Apply*
 
 
-What you can configure is what Ad-type to indentigy the beacon in JSON
+What you can configure is what Ad-type to indentify the beacon in JSON
 * Secure
-* Eddy UID
+* Eddystone UID
 * iBeacon
-* bcId
+* bcId (bluecats identifier)
 
 <p align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeHTTPEndpoint.png" alt="HTTP"/></p>
 
@@ -82,16 +82,6 @@ Example: CSV (for UDP, MQTT)
 ```
 BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617FF0401050413012600040F82BD640391F8E602F514C96D0302C4FE
 ```
-
-- Message Type (CSV only) 
-- Message Version  | 1 (CSV only to track format changes)
-- EdgeMAC - Hardware MAC address of the Edge
-- EdgeName - A user defined name for the Edge
-- BeaconMAC - Scanned (public) BT Address of the detected BLE device
-- RSSI - Received Signal Strength Indicator in dBm
-- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
-- Timestamp - Nanoseconds since Epoch
-- AdData - Full advertisement data payload
 
 | Field            | Example
 | ---              | ---
@@ -104,6 +94,18 @@ BCAdData,1,E4956E40DFCF,Edge-abc,A0E6F854703A,-63,-62,1480314351666436,02010617F
 | RSSI Smooth      | -62
 | Timestamp        | 1480314352373689
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
+
+- Message Type (CSV only) 
+- Message Version  | 1 (CSV only to track format changes)
+- EdgeMAC - Hardware MAC address of the Edge
+- EdgeName - A user defined name for the Edge
+- BeaconMAC - Scanned (public) BT Address of the detected BLE device
+- RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
+- Timestamp - Nanoseconds since Epoch
+- AdData - Full advertisement data payload
+
+
 
 
 ### JSON 
@@ -128,28 +130,6 @@ Example: JSON (for MQTT,UDP)
 
 }
 ```
-For all of the protocols with JSON, you can add additional Key, Values.
-For HTTP, you can also add Additional HTTP Headers.
-
-<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/JSONKeyValue.png" alt="JSON Key Value Pairs"/></p>
-
-
-
-- EdgeMAC - Hardware MAC address of the Edge
-- Device-ID - For internal use, not a constant (ignore)
-- MAC Address - The MAC Adress of the Beacon
-- Measured Power - Measured power at 1 metre
-- RSSI - Received Signal Strength Indicator in dBm
-- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
-- Ad Mask - The advertisement mask 
-- Channel - The Ad channel the Beacon Ad was received on
-- Timestamp - Nanoseconds since Epoch
-- Battery Power - Measured Battery power 
-- BLE MAC Address - Scanned (public) BT Address of the detected BLE device
-- Version Setting - Version Setting the Beacon is on 
-- Firmware UID - Firmware unique identifier (Beacon Serial Number) 
-- AdData - Full advertisement data payload
-
 | Field            | Example
 | ---              | ---
 | Edge MAC Address | E4956E40DFCF
@@ -167,22 +147,28 @@ For HTTP, you can also add Additional HTTP Headers.
 | Firmware UID     | 5000006e
 | AdData           | 0201061AFF4C00021561687109905F443691F8E602F514C96D00040F82BD
 
+- EdgeMAC - Hardware MAC address of the Edge
+- Device-ID - For internal use, not a constant (ignore)
+- MAC Address - The MAC Adress of the Beacon
+- Measured Power - Measured power at 1 metre
+- RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
+- Ad Mask - The advertisement mask 
+- Channel - The Ad channel the Beacon Ad was received on
+- Timestamp - Nanoseconds since Epoch
+- Battery Power - Measured Battery power 
+- BLE MAC Address - Scanned (public) BT Address of the detected BLE device
+- Version Setting - Version Setting the Beacon is on 
+- Firmware UID - Firmware unique identifier (Beacon Serial Number) 
+- AdData - Full advertisement data payload
+
+For all of the protocols with JSON, you can add additional Key, Values.
+For HTTP, you can also add Additional HTTP Headers.
+
+<p style="text-align:center" align="center"><img align="center" style="max-width: 400px;" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/JSONKeyValue.png" alt="JSON Key Value Pairs"/></p>
 
 
 Example: JSON for HTTP 
-
-| Field            | Example
-| ---              | ---
-| Edge MAC Address | E4956E40DFCF
-| Location         | (ignore)
-| ---              | ---
-| **Devices**      | 
-| MAC Address      | 98072D06813B
-| Measured Power   | -67
-| RSSI             | -63
-| RSSI Smooth      | -62
-| Timestamp        | 2017-10-03T18:19:13.230952Z
-| Battery Power    | 83
 
 ```
 {
@@ -207,9 +193,36 @@ Example: JSON for HTTP
 }
 ```
 
+| Field            | Example
+| ---              | ---
+| Edge MAC Address | E4956E40DFCF
+| Location         | (ignore)
+| ---              | ---
+| **Devices**      | 
+| MAC Address      | 98072D06813B
+| Measured Power   | -67
+| RSSI             | -63
+| RSSI Smooth      | -62
+| Timestamp        | 2017-10-03T18:19:13.230952Z
+| Battery Power    | 83
+
+
+- EdgeMAC - Hardware MAC address of the Edge
+- Location - Ignore
+- Devices- - JSON List of all seen devices
+- MAC Address - The MAC Address of the Beacon
+- Measured Power - Measured power at 1 metre
+- RSSI - Received Signal Strength Indicator in dBm
+- RSSI Smooth - Received Signal Strength Indicator in dBm. Signal fluctuations are filtered to provide a more stable value.
+- Timestamp - Nanoseconds since Epoch
+- Battery Power - Measured Battery power 
 
 ### Binary 
 Example: UDP or MQTT
+
+```
+ 3, 1, 193, 76, 110, 149, 228, 193, 233, 14, 45, 7, 152, 1, -74, -71, 127, 38, 56, 52, '\x14ah'
+ ```
 
 >*fields are little-endian
 
@@ -229,9 +242,7 @@ Offset  | Length | Type      | Field
 20      | 1      | uint8_t   | Payload Length
 21      | 1-255  | uint8_t[] | Payload Data
 
-```
- 3, 1, 193, 76, 110, 149, 228, 193, 233, 14, 45, 7, 152, 1, -74, -71, 127, 38, 56, 52, '\x14ah'
- ```
+
 
 
 ## BlueCats Edge Supported BLE Ad Types
@@ -267,9 +278,9 @@ When BLE advertisements are received from each scan they can be filtered using o
 - Generic BLE Advertisement Pattern/Mask e.g. 000000FF/00000041 for BC Ads
 
 ## Testing Your Endpoints
-### Example - Receiving data with a simple UDP server
+### Example - UDP
 
-Once the Edge has been configured to send messages over UDP to a port and IP, a simple server applicaiton can be set up to listen for the messages.
+Once the Edge has been configured to send messages over UDP to a port and IP, a simple server application can be set up to listen for the messages.
 
 To receive the data we will need to set up a local UDP server to listen on the port configured for the UDP endpoint. Here is an example in Python:
 
@@ -303,6 +314,54 @@ and each received message will be printed to the console e.g.
 2016-11-28 17:25:52.074793  -UDP-  BCAdData,1,E4956E40DFCF,A0E6F854703A,-62,-63,1480314352171590,02010614FF04010997BD34DB5E40A7346BC6F681F1D3D50A
 ```
 
-## Using 3rd party UDP servers to view BLE traffic
+#### Using 3rd party UDP servers to view BLE traffic
 
 If you don't have a coding background, then a free UDP server application like [PacketSender](https://packetsender.com/) will show you all the data being sent from the Edge Relay to your computer *(remember to set the IP address and port in [end point configuration](#udp))*.
+
+### Example - MQTT
+Once the Edge has been configured to send messages over MQTT to a port and IP, a simple server application can be set up to listen for the messages.
+
+To receive the data we will need to set up a local HTTP server to listen on the port configured for the UDP endpoint. Here is an example in a third party Broker MQTT client called [HiveMQ](http://www.hivemq.com/demos/websocket-client/)
+
+1.We set the Host to the IP address 192.168.8.1 
+2. Set the Port one above our port (i.e. our Port is 1883 we put 1884). 
+3. Click Connect. 
+4. Click Subscribe
+5. Add "edge/#"
+6. You should see messages coming in
+
+### Example - HTTP 
+Once the Edge has been configured to send messages over HTTP to a port and IP, a simple server application can be set up to listen for the messages.
+
+To receive the data we will need to set up a local HTTP server to listen on the port configured for the UDP endpoint. Here is an example in Python:
+
+```
+import SimpleHTTPServer
+import SocketServer
+import logging
+import cgi
+import json
+import time
+
+PORT = 8010
+
+class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+
+    def do_GET(self):
+        logging.error(self.headers)
+        SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+
+    def do_POST(self):
+        logging.error(self.headers)
+        content_len = int(self.headers.getheader('content-length', 0))
+        post_body = self.rfile.read(content_len)
+        print "post_body(%s)" % (post_body)
+        SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+
+Handler = ServerHandler
+
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+print "serving at port", PORT
+httpd.serve_forever()
+```
