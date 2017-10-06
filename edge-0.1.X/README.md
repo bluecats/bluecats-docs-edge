@@ -29,27 +29,28 @@
 - [View Logs](edge-troubleshooting.md#viewing-local-logs)
 - [Reset Edge to Default Firmware](edge-troubleshooting.md#resetting-edge-to-default-firmware-when-locked-out)
 
+
 # Sample Integrations using Node-Red or AWS IoT
 
 #### - Getting started with Node-red
-- [About Node-red](samples/node-red-gettingstarted.md#about)
-- [Installation](samples/node-red-gettingstarted.md#installation)
-- [Runnings](samples/node-red-gettingstarted.md#running)
-- [Adding nodes](samples/node-red-gettingstarted.md#adding-nodes)
-- [Creating Node-red flows](samples/node-red-gettingstarted.md#creating-node-red-flows)
+- [About Node-red](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md#about)
+- [Installation](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md#installation)
+- [Runnings](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md#running)
+- [Adding nodes](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md#adding-nodes)
+- [Creating Node-red flows](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-gettingstarted.md#creating-node-red-flows)
 
 #### - Send measurement data over UDP
-- [Edge Relay Configuration](samples/node-red-measurements-over-udp.md#edge-relay-configuration)
-- [Node-red Configuration](samples/node-red-measurements-over-udp.md#node-red-configuration)
-- [UI Dashboard](samples/node-red-measurements-over-udp.md#ui-dashboard)
+- [Edge Relay Configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-over-udp.md#edge-relay-configuration)
+- [Node-red Configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-over-udp.md#node-red-configuration)
+- [UI Dashboard](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-over-udp.md#ui-dashboard)
 
 #### - Send Proximity Data to a MQTT Broker
-- [Edge Relay Configuration](samples/node-red-proximity-over-mqtt.md#edge-relay-configuration)
-- [Node-red Configuration](samples/node-red-proximity-over-mqtt.md#node-red-configuration)
-- [UI Dashboard](samples/node-red-proximity-over-mqtt.md#ui-dashboard)
+- [Edge Relay Configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-proximity-over-mqtt.md#edge-relay-configuration)
+- [Node-red Configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-proximity-over-mqtt.md#node-red-configuration)
+- [UI Dashboard](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-proximity-over-mqtt.md#ui-dashboard)
 
 #### - Send Measurement Data to AWS IoT
-- [Getting Started with AWS IoT](samples/node-red-measurements-aws-iot.md#getting-started-with-aws-iot)
-- [Edge Relay Configuration](samples/node-red-measurements-aws-iot.md#edge-relay-configuration)
-- [Node-red configuration](samples/node-red-measurements-aws-iot.md#node-red-configuration)
-- [UI Dashboard](samples/node-red-measurements-aws-iot.md#ui-dashboard)
+- [Getting Started with AWS IoT](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-aws-iot.md#getting-started-with-aws-iot)
+- [Edge Relay Configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-aws-iot.md#edge-relay-configuration)
+- [Node-red configuration](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-aws-iot.md#node-red-configuration)
+- [UI Dashboard](https://github.com/bluecats/bluecats-docs-edge/blob/master/samples/node-red-measurements-aws-iot.md#ui-dashboard)
