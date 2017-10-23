@@ -7,17 +7,22 @@
 - [Connecting to WIFI](getting-started-connect.md#connecting-to-internet-via-wifi)
 - [Register the device with BlueCats Cloud for monitoring and updates](getting-started-connect.md#register-with-bluecats-cloud)
 
-### Configuring Applications
+### Configuring Endpoints
 
-- [BlueCats Edge Applications](getting-started-edge-applications.md#bluecats-edge-applications---overview)
-- [Live View](getting-started-edge-applications.md#live-view)
-- [Configure Endpoints](getting-started-edge-applications.md#configure-endpoints)
-- [Configure Applications](getting-started-edge-applications.md#configure-applications)
-    - [Scan and Forward](getting-started-edge-applications.md#application---scan-and-forward)
-    - [Proximity](getting-started-edge-applications.md#application---proximity)
-    - [Sensor Measurement](getting-started-edge-applications.md#application---sensor-measurement)
-    - [BlueCats Beacon Health](getting-started-edge-applications.md#application---bluecats-beacon-health)
+- [BlueCats Edge Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#bluecats-edge-endpoints---overview)
+- [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#live-view)
+- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#configure-endpoints)
+    -*Endpoint Types*
+        -[UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
+        -[MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
+        -[HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#http)
+    -*Data Types*
+        -[CSV](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#csv)
+        -[JSON](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#json)
+        -[Binary](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#binary) 
 - [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
+- [Example MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---mqtt)
+- [Example HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---http)
 
 ### Updating Firmware and Packages
 - [Flashing  New Firmware](edge-update-firmware.md#flashing-new-firmware)
