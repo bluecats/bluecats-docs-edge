@@ -1,14 +1,21 @@
 # BlueCats Edge Endpoints - Overview
+### Configuring Endpoints
 
-- [BlueCats Edge Endpoints](#bluecats-edge-endpoints---overview)
-- [Live View](#live-view)
-- [Configure Endpoints](#configure-endpoints)
-- [Configure Applications](#configure-applications)
-    - [Scan and Forward](#application---scan-and-forward)
-    - [Proximity](#application---proximity)
-    - [Sensor Measurement](#application---sensor-measurement)
-    - [BlueCats Beacon Health](#application---bluecats-beacon-health)
-- [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
+- [BlueCats Edge Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#bluecats-edge-endpoints---overview)
+- [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#live-view)
+- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#configure-endpoints)
+    - *Endpoint Types*
+        - [UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
+        - [MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
+        - [HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#http)
+    - *Data Types*
+        - [CSV](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#csv)
+        - [JSON](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#json)
+        - [Binary](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#binary) 
+- [Example UDP Server](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---udp)
+- [Example MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---mqtt)
+- [Example HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---http)
+
 
 The Edge Relay provides the ability to send your data that you want to various endpoint types (UDP, MQTT, or HTTP) and message formats (CSV, JSON, or Binary). With the Edge you can:
 
