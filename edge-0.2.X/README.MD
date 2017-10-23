@@ -12,14 +12,14 @@
 - [BlueCats Edge Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#bluecats-edge-endpoints---overview)
 - [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#live-view)
 - [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#configure-endpoints)
-    -*Endpoint Types*
-        -[UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
-        -[MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
-        -[HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#http)
-    -*Data Types*
-        -[CSV](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#csv)
-        -[JSON](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#json)
-        -[Binary](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#binary) 
+    - *Endpoint Types*
+        - [UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
+        - [MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
+        - [HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#http)
+    - *Data Types*
+        - [CSV](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#csv)
+        - [JSON](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#json)
+        - [Binary](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#binary) 
 - [Example UDP Server](getting-started-edge-applications.md#example---receiving-data-with-a-simple-udp-server)
 - [Example MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---mqtt)
 - [Example HTTP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#example---http)
