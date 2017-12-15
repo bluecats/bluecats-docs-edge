@@ -13,13 +13,13 @@ The BlueCats Edge kit contains:
 - Micro USB cable for power
 - External Bluetooth antenna
 
-## Connecting to the Edge
+## Connecting to the Edge (With Ethernet)
+The easiest way to configure the Edge is to connect it directly to your computer via Ethernet. 
 
-Start by plugging the supplied micro-usb cable into the edge and any USB port to power up the device and attach the external bluetooth antenna. Note that it may take 20-30 seconds to complete startup. The easiest way to configure the Edge is to connect it directly to your computer via Ethernet. Connect a straight-through ethernet cable between the ethernet port on your computer and the LAN port of the Edge. DHCP is enabled by default so with DHCP selected for your ethernet network adapter, your machine should be assigned an IP address in the range 192.168.8.0 for example:
-
-![Connect to Edge using Ethernet](https://s3.amazonaws.com/bluecats-downloads/documentation/bluecats-edge-getting-started/010-Connect.png "Connect with Ethernet")
-
-Note the assigned IP address for later (in this case `192.168.8.147`) as this will be used as the test endpoints to receive scan data over UDP. 
+1. Connect an ethernet cable to your computer and to the LAN port of the Edge.
+2. Attach the external bluetooth antenna. 
+3. Plug in the  supplied micro-usb cable into the edge to power up the device. (Note that it may take 20-30 seconds to complete startup.)
+4. Then go to this address [192.168.8.1](http://192.168.8.1).
 
 ## Connecting to the Edge Through WiFi (Without Ethernet)
 Start by plugging the supplied micro-usb cable into the edge and any USB port to power up the device and attach the external bluetooth antenna. Note that it may take 20-30 seconds to complete startup. 
