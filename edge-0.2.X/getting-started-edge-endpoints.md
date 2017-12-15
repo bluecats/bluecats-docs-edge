@@ -1,9 +1,9 @@
 # BlueCats Edge Endpoints - Overview
-### Configuring Endpoints
+### Forwarding Data
 
 - [BlueCats Edge Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#bluecats-edge-endpoints---overview)
 - [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#live-view)
-- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#configure-endpoints)
+- [Forwarding Data](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#forwarding-data)
     - *Endpoint Types*
         - [UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
         - [MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
@@ -35,7 +35,7 @@ Live view provides a simple list of BLE devices detected in range of the Edge al
 
 <p style="text-align:center" align="center"><img width="600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeLiveViewApplication.png" alt="Live View"/></p>
 
-## Configure Endpoints
+## Forwarding Data 
 
 To make use of the data collected by the Edge, you will need to send it somewhere. The default Edge applications support three types of endpoint - UDP, MQTT, or HTTP. Configure one or all three of the endpoint options. Currently, the Edge supports a as many endpoints for each type. Data will be sent to the configured endpoints when an Edge application has been enabled.
 
@@ -43,6 +43,31 @@ To make use of the data collected by the Edge, you will need to send it somewher
 
 <p style="text-align:center" align="center"><img align="center" width= "600" src="https://s3-us-west-1.amazonaws.com/github-photos/DeveloperDocs/EdgeDocuments/EdgeConfigureEndpointsApplication.png" alt="Endpoints"/></p>
 
+### Forwarding Parameters
+
+
+- Name -  This is what to name the endpoint
+- Enabled - This check box is what enables forwarding data. It can be checked or unchecked. 
+- Event Type - The type of "messages" or data the Edge is scanning for:
+    - BLE Scan Event: Everytime it sees the Beacon in range, it forwards the data. 
+    - Location Zone Event: Whenever there is an Enter or Exit Zone, Change Zone, Timestamp. Applies to our Location Engine
+    - Heartbeat Event: Sending the Edges information to an Endpoint 
+- Protocol - This is what protocol you can configure discuessed below how to configure. 
+    - MQTT 
+    - UDP 
+    - HTTP 
+- Ad Type to identify beacon in JSON
+    - Secure 
+    - Eddy UID
+    - iBeacon 
+    - bcId
+- Enable TLS - This enables the ability for TLS connections 
+- Host or IP address - Where the data is sent to 
+- Port - What port to send the data to 
+- RSSI threshold - Changing this number filters what RSSI values the Edge will Scan for. Enter -127 to effectively disable rssi throttle
+- Number per Interval - Number of devices, maximum number it can send per interval 
+- Interval length - Length of the interval in seconds
+- Enable Filtering - will apply allow you to apply any filters you created to the Edges
 
 ### UDP
 To configure UDP:
