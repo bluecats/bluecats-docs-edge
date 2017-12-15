@@ -7,11 +7,11 @@
 - [Connecting to WIFI](getting-started-connect.md#connecting-to-internet-via-wifi)
 - [Register the device with BlueCats Cloud for monitoring and updates](getting-started-connect.md#register-with-bluecats-cloud)
 
-### Configuring Endpoints
+### Forwarding Data 
 
 - [BlueCats Edge Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#bluecats-edge-endpoints---overview)
 - [Live View](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#live-view)
-- [Configure Endpoints](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#configure-endpoints)
+- [Forwarding Data](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#forwarding-data)
     - *Endpoint Types*
         - [UDP](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#udp)
         - [MQTT](https://github.com/bluecats/bluecats-docs-edge/blob/master/edge-0.2.X/getting-started-edge-endpoints.md#mqtt)
