@@ -52,7 +52,7 @@ To make use of the data collected by the Edge, you will need to send it somewher
     - BLE Scan Event: Everytime it sees the Beacon in range, it forwards the data. 
     - Location Zone Event: Whenever there is an Enter or Exit Zone, Change Zone, Timestamp. Applies to our Location Engine
     - Heartbeat Event: Sending the Edges information to an Endpoint 
-- Protocol - This is what protocol you can configure discuessed below how to configure. 
+- Protocol - This is what transport protocol will be used - discussed below how to configure. 
     - MQTT 
     - UDP 
     - HTTP 
